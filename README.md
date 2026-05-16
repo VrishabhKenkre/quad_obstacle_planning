@@ -24,26 +24,46 @@ python3 planning/eval_planner.py            # runs the full 10-seed eval
 ```
 
 ## What's in this repo
-planning/                  Hierarchical A* + min-snap + NMPC stack
-voxelize.py                  occupancy grid + ESDF
-astar.py                     3D A* on the voxel grid
-min_snap.py                  minimum-snap polynomial smoothing
-hierarchical_ctrl.py         planner-NMPC integration
-eval_planner.py              10-seed eval harness
-record_demo.py               video recording
-tests/                       pytest suite (17/17 passing)
-src/                       Crazyflie dynamics, MuJoCo env, NMPC, DAgger
-quad_dynamics.py             Crazyflie 12-state linearization
-quad_env.py                  MuJoCo Crazyflie env wrapper
-nonlinear_mpc.py             SE(3) NMPC with CasADi
-obstacle_course.py           Gaussian obstacle field generator
-dagger.py                    DAgger+DART distillation pipeline
-policy_inference.{c,h}       distilled-policy C inference
-mujoco_menagerie/          Bitcraze Crazyflie 2 model (with actuator
-corrections; see Known Issues)
-results/                   10-seed JSONs + verification plots
-videos/                    Demo videos
-scripts/                   Numerical verification scripts
+quad_obstacle_planning/
+├── planning/                       Hierarchical A* + min-snap + NMPC stack
+│   ├── voxelize.py                   occupancy grid + ESDF
+│   ├── astar.py                      3D A* on the voxel grid
+│   ├── min_snap.py                   minimum-snap polynomial smoothing
+│   ├── hierarchical_ctrl.py          planner ↔ NMPC integration
+│   ├── eval_planner.py               10-seed evaluation harness
+│   ├── record_demo.py                video recording
+│   └── tests/                        pytest suite (17/17 passing)
+│
+├── src/                            Crazyflie dynamics, MuJoCo env, NMPC, DAgger
+│   ├── quad_dynamics.py              Crazyflie 12-state linearization
+│   ├── quad_env.py                   MuJoCo Crazyflie env wrapper
+│   ├── nonlinear_mpc.py              SE(3) NMPC with CasADi
+│   ├── obstacle_course.py            Gaussian obstacle field generator
+│   ├── dagger.py                     DAgger+DART distillation pipeline
+│   ├── solver_admm_c.py              ctypes wrapper for the C ADMM solver
+│   └── policy_inference.{c,h}        distilled-policy C inference
+│
+├── mujoco_menagerie/               Bitcraze Crazyflie 2 model
+│   └── bitcraze_crazyflie_2/         patched cf2.xml (see Known Issues)
+│
+├── results/                        10-seed JSONs + verification plots
+│   ├── planner_10seed.json
+│   ├── sdf_dagger_obstacle_10seed.json
+│   ├── sanity_check_goal_err.png
+│   ├── no_clipping_check.png
+│   └── clearance_check.png
+│
+├── videos/                         Demo videos
+│   ├── planner_demo.mp4
+│   └── planner_demo_solvetimes.csv
+│
+├── scripts/                        Numerical verification scripts
+│   ├── verify_planner_16mm.py
+│   ├── verify_planner_no_clipping.py
+│   └── verify_planner_clearance.py
+│
+├── figures/                        Paper figures
+└── README.md
 
 ## Reproducing the result
 
