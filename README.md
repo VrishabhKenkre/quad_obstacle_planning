@@ -24,6 +24,7 @@ python3 planning/eval_planner.py            # runs the full 10-seed eval
 ```
 
 ## What's in this repo
+```
 quad_obstacle_planning/
 ├── planning/                       Hierarchical A* + min-snap + NMPC stack
 │   ├── voxelize.py                   occupancy grid + ESDF
@@ -64,6 +65,8 @@ quad_obstacle_planning/
 │
 ├── figures/                        Paper figures
 └── README.md
+```
+
 
 ## Reproducing the result
 
