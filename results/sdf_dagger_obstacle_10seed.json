@@ -1,0 +1,41 @@
+{
+  "metadata": {
+    "n_seeds": 10,
+    "obstacle_seeds": [42, 7, 13, 99, 256, 128, 314, 2024, 777, 1337],
+    "task": "8-obstacle Gaussian course, start=(-1.5,-1.5,1) goal=(1.5,1.5,1)",
+    "obs_dim": 23,
+    "obs_design": "vel, euler, omega, goal_dir(unit), goal_dist, ref_vel_dir, SDF nearest+gradient, SDF look-ahead probes (ahead/left/right at +/-0.3m)",
+    "net": "128-128 ReLU MLP, ~20k params",
+    "actions": "[roll, pitch, yaw_rate, thrust]",
+    "training_data": "64 NMPC obstacle course seeds (8000 samples) + ADMM free-flight (10000 samples)",
+    "dagger_iters": 5,
+    "dagger_beta_schedule": "0.9 -> 0.6",
+    "dart_sigma_clip": [0.005, 0.12]
+  },
+  "obstacle_course": {
+    "NMPC_teacher":     {"goal_err_mm": 46,    "goal_std": 10,    "max_field": 0.106, "field_std": 0.040, "teacher_dev_mm": 0,   "dev_std": 0,   "path_len_m": 4.80, "path_std": 0.31, "speed_us": 59000},
+    "Linear_MPC_blind": {"goal_err_mm": 49,    "goal_std": 0,     "max_field": 0.823, "field_std": 0.384, "teacher_dev_mm": 191, "dev_std": 66,  "path_len_m": 4.19, "path_std": 0.00, "speed_us": 77},
+    "BC_SDF":           {"goal_err_mm": 770,   "goal_std": 846,   "max_field": 0.505, "field_std": 0.358, "teacher_dev_mm": 507, "dev_std": 226, "path_len_m": 6.49, "path_std": 1.29, "speed_us": 92},
+    "DAgger_SDF":       {"goal_err_mm": 1036,  "goal_std": 867,   "max_field": 0.491, "field_std": 0.386, "teacher_dev_mm": 548, "dev_std": 322, "path_len_m": 6.53, "path_std": 1.18, "speed_us": 94},
+    "DAgger_DART_SDF":  {"goal_err_mm": 420,   "goal_std": 204,   "max_field": 0.475, "field_std": 0.273, "teacher_dev_mm": 340, "dev_std": 113, "path_len_m": 5.44, "path_std": 0.41, "speed_us": 91}
+  },
+  "sem": {
+    "DAgger_DART_SDF": {"goal_sem_mm": 64.6,  "field_sem": 0.0865},
+    "DAgger_SDF":      {"goal_sem_mm": 274.2, "field_sem": 0.1221},
+    "BC_SDF":          {"goal_sem_mm": 267.6, "field_sem": 0.1131}
+  },
+  "welch_t_tests": {
+    "DART_vs_DAgger_goal":  {"t": -2.076, "p": 0.0646, "significant_at_0.05": false},
+    "DART_vs_DAgger_field": {"t": -0.101, "p": 0.9206, "significant_at_0.05": false},
+    "DART_vs_BC_goal":      {"t": -1.207, "p": 0.2550, "significant_at_0.05": false},
+    "DART_vs_BC_field":     {"t": -0.204, "p": 0.8407, "significant_at_0.05": false}
+  },
+  "free_flight": {
+    "n_configs": 10,
+    "note": "no obstacles, varied start-goal distances",
+    "NMPC":        {"goal_err_mm": 50,  "goal_std": 14},
+    "BC":          {"goal_err_mm": 132, "goal_std": 53},
+    "DAgger_DART": {"goal_err_mm": 133, "goal_std": 39},
+    "DAgger":      {"goal_err_mm": 207, "goal_std": 157}
+  }
+}
