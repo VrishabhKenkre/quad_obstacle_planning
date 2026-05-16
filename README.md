@@ -67,24 +67,6 @@ The NMPC tracker uses a CasADi/IPOPT solver; expect ~1.5× slower on
 older laptop CPUs. No GPU required for the planner; the IL pipeline in
 `src/dagger.py` uses PyTorch with CUDA if available.
 
-## Known issues
-
-1. **Distilled-policy architecture mismatch.** `src/policy_weights.h`
-   corresponds to a corrected 5,764-parameter network (20-D obs, no
-   LayerNorm). An earlier 6,276-parameter architecture is referenced
-   in some draft papers; tracking and inference numbers are robust
-   to the revision.
-2. **MuJoCo Menagerie patches.** The Crazyflie model in
-   `mujoco_menagerie/bitcraze_crazyflie_2/cf2.xml` has been patched
-   from the upstream MuJoCo Menagerie release. The corrections fix
-   thrust range (placeholder `0 0.35` → real `0 0.6`) and torque
-   gear magnitudes (placeholder `1e-5` → realistic Crazyflie values).
-   These are required for the dynamics to match the real hardware.
-3. **No hardware validation.** Demo videos are MuJoCo simulation only.
-   STM32 deployment is planned future work.
-4. **Verification scripts** in `scripts/` assume `python3 scripts/...`
-   is run from the repo root.
-
 ## Citation
 
 ```bibtex
