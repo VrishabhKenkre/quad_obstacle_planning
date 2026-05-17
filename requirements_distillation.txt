@@ -1,0 +1,9 @@
+# Phase 3 extras on top of the existing quad_mpc env (torch, mujoco,
+# casadi, scipy, numpy, matplotlib are already installed).
+#
+# diffusers - HuggingFace DDPM/DDIM schedulers; required by
+#             external/diffusion_policy.diffusion_policy.policy.
+#             DiffusionUnetLowdimPolicy
+# einops    - tensor rearrange ops used by the same module
+diffusers>=0.27
+einops>=0.7
