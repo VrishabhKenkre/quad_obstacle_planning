@@ -1,0 +1,94 @@
+{
+  "random_10seed": [
+    {
+      "controller": "NMPC teacher (reactive)",
+      "goal_err_mm": 46,
+      "goal_std": 10,
+      "max_field": 0.106,
+      "field_std": 0.04,
+      "latency_ms": 59.0
+    },
+    {
+      "controller": "Hierarchical planner",
+      "goal_err_mm": 16.290974096476436,
+      "goal_std": 13.909526419035089,
+      "max_field": 0.045763349128857614,
+      "field_std": 0.025106059739935977,
+      "latency_ms": 23.47972203278914
+    },
+    {
+      "controller": "MLP DAgger+DART (planner)",
+      "goal_err_mm": 845.5282189919666,
+      "goal_std": 259.7466475513134,
+      "max_field": 0.25143303611224943,
+      "field_std": 0.16670249620639369,
+      "latency_ms": 0.028684550488833338
+    },
+    {
+      "controller": "Diffusion BC v2 K=3 (planner)",
+      "goal_err_mm": 107.08900161125457,
+      "goal_std": 24.28115615349012,
+      "max_field": 0.17380089960163364,
+      "field_std": 0.2602062691549926,
+      "latency_ms": 18.76369364981656
+    },
+    {
+      "controller": "MLP BC-only (planner)",
+      "goal_err_mm": 36.94814978877329,
+      "goal_std": 22.491787485242035,
+      "max_field": 0.3251121156939599,
+      "field_std": 0.370415237135644,
+      "latency_ms": 0.02863990084733814
+    }
+  ],
+  "decision_point": {
+    "Hierarchical_Planner": {
+      "goal_err_mm": 14.007887838389314,
+      "goal_std": 3.06268074135229,
+      "max_field": 0.04781979262507099,
+      "field_std": 0.004839012367237368,
+      "max_field_median": 0.04648348367772943,
+      "max_field_p95": 0.05642754781656262
+    },
+    "MLP_DAgger_DART": {
+      "goal_err_mm": 1123.2662711749401,
+      "goal_std": 626.673113932081,
+      "max_field": 0.8964598764086512,
+      "field_std": 0.3074263272243839,
+      "max_field_median": 0.9117606922005432,
+      "max_field_p95": 1.336061525462986
+    },
+    "MLP_BC_only": {
+      "goal_err_mm": 2406.299254274935,
+      "goal_std": 2861.7421110169453,
+      "max_field": 0.6026857476507057,
+      "field_std": 0.3971998807342728,
+      "max_field_median": 0.5531066853638951,
+      "max_field_p95": 1.2327476447654722
+    },
+    "Diffusion_BC_v1": {
+      "goal_err_mm": 117.9597925811876,
+      "goal_std": 15.884248903566807,
+      "max_field": 0.5111123601555435,
+      "field_std": 0.6296363865085675,
+      "max_field_median": 0.11087891213625271,
+      "max_field_p95": 1.5031515137290583
+    },
+    "Diffusion_BC_v2_single": {
+      "goal_err_mm": 68.79918353019175,
+      "goal_std": 6.58891388344462,
+      "max_field": 0.733302507472142,
+      "field_std": 0.44769998649111303,
+      "max_field_median": 0.6759490252262186,
+      "max_field_p95": 1.3573683681531994
+    },
+    "Diffusion_BC_v2_multi": {
+      "goal_err_mm": 100.20710890987475,
+      "goal_std": 5.489263555598291,
+      "max_field": 0.45230993874971154,
+      "field_std": 0.35762695832725727,
+      "max_field_median": 0.5536127767765053,
+      "max_field_p95": 0.9764049227187073
+    }
+  }
+}
