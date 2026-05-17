@@ -1,0 +1,5324 @@
+{
+  "n_random_seeds": 200,
+  "k_per_seed": 3,
+  "n_decision_seeds": 30,
+  "n_samples": 192853,
+  "n_rollouts": 658,
+  "obs_dim": 24,
+  "act_dim": 4,
+  "dart_sigma": [
+    0.029999999329447746,
+    0.03999999910593033,
+    0.03999999910593033,
+    0.029999999329447746
+  ],
+  "probe_offsets": [
+    [
+      0.30000001192092896,
+      0.0,
+      0.0
+    ],
+    [
+      -0.30000001192092896,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.30000001192092896,
+      0.0
+    ],
+    [
+      0.0,
+      -0.30000001192092896,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.30000001192092896
+    ],
+    [
+      0.0,
+      0.0,
+      -0.30000001192092896
+    ],
+    [
+      0.5,
+      0.5,
+      0.0
+    ],
+    [
+      -0.5,
+      -0.5,
+      0.0
+    ]
+  ],
+  "obs_layout": "pos_err(3) + vel(3) + euler(3) + omega(3) + sdf(1) + sdf_grad(3) + 8*sdf_probe",
+  "rollouts": [
+    {
+      "seed": 1000,
+      "variant_id": 0,
+      "n_steps": 284,
+      "aborted": false,
+      "final_err_mm": 39.01168703132597,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1000,
+      "variant_id": 1,
+      "n_steps": 278,
+      "aborted": false,
+      "final_err_mm": 39.160705479405316,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1000,
+      "variant_id": 2,
+      "n_steps": 282,
+      "aborted": false,
+      "final_err_mm": 37.27908768474808,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1008,
+      "variant_id": 3,
+      "n_steps": 288,
+      "aborted": false,
+      "final_err_mm": 9.736315040570442,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1008,
+      "variant_id": 4,
+      "n_steps": 275,
+      "aborted": false,
+      "final_err_mm": 10.29652886291987,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1008,
+      "variant_id": 5,
+      "n_steps": 291,
+      "aborted": false,
+      "final_err_mm": 6.827855373792819,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1016,
+      "variant_id": 6,
+      "n_steps": 283,
+      "aborted": false,
+      "final_err_mm": 18.103148941068287,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1016,
+      "variant_id": 7,
+      "n_steps": 282,
+      "aborted": false,
+      "final_err_mm": 14.852123277486157,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1016,
+      "variant_id": 8,
+      "n_steps": 285,
+      "aborted": false,
+      "final_err_mm": 17.553090074579035,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1024,
+      "variant_id": 9,
+      "n_steps": 290,
+      "aborted": false,
+      "final_err_mm": 4.565241753728324,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1024,
+      "variant_id": 10,
+      "n_steps": 275,
+      "aborted": false,
+      "final_err_mm": 14.553226323137599,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1024,
+      "variant_id": 11,
+      "n_steps": 277,
+      "aborted": false,
+      "final_err_mm": 10.868378699491494,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1032,
+      "variant_id": 12,
+      "n_steps": 281,
+      "aborted": false,
+      "final_err_mm": 8.392804656280951,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1032,
+      "variant_id": 13,
+      "n_steps": 285,
+      "aborted": false,
+      "final_err_mm": 9.723542515121645,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1032,
+      "variant_id": 14,
+      "n_steps": 280,
+      "aborted": false,
+      "final_err_mm": 12.02274915470014,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1040,
+      "variant_id": 15,
+      "n_steps": 285,
+      "aborted": false,
+      "final_err_mm": 14.359397639285602,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1040,
+      "variant_id": 16,
+      "n_steps": 278,
+      "aborted": false,
+      "final_err_mm": 12.320086466822339,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1040,
+      "variant_id": 17,
+      "n_steps": 292,
+      "aborted": false,
+      "final_err_mm": 4.612873625492875,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1048,
+      "variant_id": 18,
+      "n_steps": 299,
+      "aborted": false,
+      "final_err_mm": 15.23932785905625,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1048,
+      "variant_id": 19,
+      "n_steps": 290,
+      "aborted": false,
+      "final_err_mm": 10.37105860160486,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1048,
+      "variant_id": 20,
+      "n_steps": 283,
+      "aborted": false,
+      "final_err_mm": 21.146398503902404,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1056,
+      "variant_id": 21,
+      "n_steps": 301,
+      "aborted": false,
+      "final_err_mm": 59.145595792704945,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1056,
+      "variant_id": 22,
+      "n_steps": 293,
+      "aborted": false,
+      "final_err_mm": 47.65131177463416,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1056,
+      "variant_id": 23,
+      "n_steps": 302,
+      "aborted": false,
+      "final_err_mm": 58.50237553528399,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1064,
+      "variant_id": 24,
+      "n_steps": 273,
+      "aborted": false,
+      "final_err_mm": 18.155140833306017,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1064,
+      "variant_id": 25,
+      "n_steps": 282,
+      "aborted": false,
+      "final_err_mm": 21.042286465456925,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1064,
+      "variant_id": 26,
+      "n_steps": 298,
+      "aborted": false,
+      "final_err_mm": 4.837076609894536,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1072,
+      "variant_id": 27,
+      "n_steps": 296,
+      "aborted": false,
+      "final_err_mm": 20.11821688274908,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1072,
+      "variant_id": 28,
+      "n_steps": 302,
+      "aborted": false,
+      "final_err_mm": 5.050960585019232,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1072,
+      "variant_id": 29,
+      "n_steps": 299,
+      "aborted": false,
+      "final_err_mm": 11.10313821369207,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1080,
+      "variant_id": 30,
+      "n_steps": 292,
+      "aborted": false,
+      "final_err_mm": 10.873946210693273,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1080,
+      "variant_id": 31,
+      "n_steps": 278,
+      "aborted": false,
+      "final_err_mm": 14.250558461071284,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1080,
+      "variant_id": 32,
+      "n_steps": 291,
+      "aborted": false,
+      "final_err_mm": 6.3101771458715294,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1088,
+      "variant_id": 33,
+      "n_steps": 299,
+      "aborted": false,
+      "final_err_mm": 39.90243268761671,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1088,
+      "variant_id": 34,
+      "n_steps": 285,
+      "aborted": false,
+      "final_err_mm": 35.11141004327512,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1088,
+      "variant_id": 35,
+      "n_steps": 302,
+      "aborted": false,
+      "final_err_mm": 37.71189535308083,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1096,
+      "variant_id": 36,
+      "n_steps": 289,
+      "aborted": false,
+      "final_err_mm": 21.853498861793597,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1096,
+      "variant_id": 37,
+      "n_steps": 289,
+      "aborted": false,
+      "final_err_mm": 15.823298521113415,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1096,
+      "variant_id": 38,
+      "n_steps": 295,
+      "aborted": false,
+      "final_err_mm": 10.769060395200178,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1104,
+      "variant_id": 39,
+      "n_steps": 292,
+      "aborted": false,
+      "final_err_mm": 9.652423688877697,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1104,
+      "variant_id": 40,
+      "n_steps": 280,
+      "aborted": false,
+      "final_err_mm": 14.187600716347369,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1104,
+      "variant_id": 41,
+      "n_steps": 280,
+      "aborted": false,
+      "final_err_mm": 13.061142165776213,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1112,
+      "variant_id": 42,
+      "n_steps": 286,
+      "aborted": false,
+      "final_err_mm": 10.632344966093749,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1112,
+      "variant_id": 43,
+      "n_steps": 297,
+      "aborted": false,
+      "final_err_mm": 9.511139684509532,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1112,
+      "variant_id": 44,
+      "n_steps": 287,
+      "aborted": false,
+      "final_err_mm": 10.556676015998049,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1120,
+      "variant_id": 45,
+      "n_steps": 274,
+      "aborted": false,
+      "final_err_mm": 9.904900000387228,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1120,
+      "variant_id": 46,
+      "n_steps": 277,
+      "aborted": false,
+      "final_err_mm": 15.090354520100101,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1120,
+      "variant_id": 47,
+      "n_steps": 283,
+      "aborted": false,
+      "final_err_mm": 5.399670753795717,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1128,
+      "variant_id": 48,
+      "n_steps": 283,
+      "aborted": false,
+      "final_err_mm": 14.75255178839864,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1128,
+      "variant_id": 49,
+      "n_steps": 287,
+      "aborted": false,
+      "final_err_mm": 19.839410984304973,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1128,
+      "variant_id": 50,
+      "n_steps": 302,
+      "aborted": false,
+      "final_err_mm": 15.903790669714219,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1136,
+      "variant_id": 51,
+      "n_steps": 288,
+      "aborted": false,
+      "final_err_mm": 8.440705085591455,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1136,
+      "variant_id": 52,
+      "n_steps": 277,
+      "aborted": false,
+      "final_err_mm": 11.899796843926117,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1136,
+      "variant_id": 53,
+      "n_steps": 281,
+      "aborted": false,
+      "final_err_mm": 9.846598042797481,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1144,
+      "variant_id": 54,
+      "n_steps": 280,
+      "aborted": false,
+      "final_err_mm": 32.70855094358765,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1144,
+      "variant_id": 55,
+      "n_steps": 291,
+      "aborted": false,
+      "final_err_mm": 30.98657213431808,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1144,
+      "variant_id": 56,
+      "n_steps": 288,
+      "aborted": false,
+      "final_err_mm": 22.434677203175696,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1152,
+      "variant_id": 57,
+      "n_steps": 307,
+      "aborted": false,
+      "final_err_mm": 9.270846015205942,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1152,
+      "variant_id": 58,
+      "n_steps": 303,
+      "aborted": false,
+      "final_err_mm": 6.076373741034383,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1152,
+      "variant_id": 59,
+      "n_steps": 297,
+      "aborted": false,
+      "final_err_mm": 15.480661059992203,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1160,
+      "variant_id": 60,
+      "n_steps": 282,
+      "aborted": false,
+      "final_err_mm": 7.497080932028483,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1160,
+      "variant_id": 61,
+      "n_steps": 278,
+      "aborted": false,
+      "final_err_mm": 10.276399176271074,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1160,
+      "variant_id": 62,
+      "n_steps": 291,
+      "aborted": false,
+      "final_err_mm": 8.408329347196624,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1168,
+      "variant_id": 63,
+      "n_steps": 285,
+      "aborted": false,
+      "final_err_mm": 114.35578520906728,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1168,
+      "variant_id": 64,
+      "n_steps": 283,
+      "aborted": false,
+      "final_err_mm": 113.62835221573508,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1168,
+      "variant_id": 65,
+      "n_steps": 285,
+      "aborted": false,
+      "final_err_mm": 112.29546538550616,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1176,
+      "variant_id": 66,
+      "n_steps": 298,
+      "aborted": false,
+      "final_err_mm": 17.5856355941519,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1176,
+      "variant_id": 67,
+      "n_steps": 298,
+      "aborted": false,
+      "final_err_mm": 17.599058374344985,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1176,
+      "variant_id": 68,
+      "n_steps": 290,
+      "aborted": false,
+      "final_err_mm": 26.981875164392306,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1184,
+      "variant_id": 69,
+      "n_steps": 291,
+      "aborted": false,
+      "final_err_mm": 25.022601269447698,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1184,
+      "variant_id": 70,
+      "n_steps": 297,
+      "aborted": false,
+      "final_err_mm": 34.52287734362007,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1184,
+      "variant_id": 71,
+      "n_steps": 282,
+      "aborted": false,
+      "final_err_mm": 29.75789915512583,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1192,
+      "variant_id": 72,
+      "n_steps": 286,
+      "aborted": false,
+      "final_err_mm": 11.915559978468602,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1192,
+      "variant_id": 73,
+      "n_steps": 280,
+      "aborted": false,
+      "final_err_mm": 12.393737597312192,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1192,
+      "variant_id": 74,
+      "n_steps": 287,
+      "aborted": false,
+      "final_err_mm": 8.89636301206881,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1000000,
+      "variant_id": 75,
+      "n_steps": 320,
+      "aborted": false,
+      "final_err_mm": 9.845540365402144,
+      "is_decision_pt": true
+    },
+    {
+      "seed": 1000000,
+      "variant_id": 76,
+      "n_steps": 319,
+      "aborted": false,
+      "final_err_mm": 12.376968761685964,
+      "is_decision_pt": true
+    },
+    {
+      "seed": 1000008,
+      "variant_id": 77,
+      "n_steps": 319,
+      "aborted": false,
+      "final_err_mm": 11.348022235866779,
+      "is_decision_pt": true
+    },
+    {
+      "seed": 1000008,
+      "variant_id": 78,
+      "n_steps": 320,
+      "aborted": false,
+      "final_err_mm": 13.514480841237098,
+      "is_decision_pt": true
+    },
+    {
+      "seed": 1000016,
+      "variant_id": 79,
+      "n_steps": 311,
+      "aborted": false,
+      "final_err_mm": 12.795061616380496,
+      "is_decision_pt": true
+    },
+    {
+      "seed": 1000016,
+      "variant_id": 80,
+      "n_steps": 311,
+      "aborted": false,
+      "final_err_mm": 7.780283927994771,
+      "is_decision_pt": true
+    },
+    {
+      "seed": 1000024,
+      "variant_id": 81,
+      "n_steps": 321,
+      "aborted": false,
+      "final_err_mm": 18.45346663756928,
+      "is_decision_pt": true
+    },
+    {
+      "seed": 1000024,
+      "variant_id": 82,
+      "n_steps": 311,
+      "aborted": false,
+      "final_err_mm": 16.32100510508608,
+      "is_decision_pt": true
+    },
+    {
+      "seed": 1001,
+      "variant_id": 83,
+      "n_steps": 291,
+      "aborted": false,
+      "final_err_mm": 14.713637292044206,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1001,
+      "variant_id": 84,
+      "n_steps": 293,
+      "aborted": false,
+      "final_err_mm": 18.19424093749276,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1001,
+      "variant_id": 85,
+      "n_steps": 297,
+      "aborted": false,
+      "final_err_mm": 8.009869574759175,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1009,
+      "variant_id": 86,
+      "n_steps": 276,
+      "aborted": false,
+      "final_err_mm": 9.526826396927246,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1009,
+      "variant_id": 87,
+      "n_steps": 277,
+      "aborted": false,
+      "final_err_mm": 12.63983872344668,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1009,
+      "variant_id": 88,
+      "n_steps": 287,
+      "aborted": false,
+      "final_err_mm": 7.378787542840795,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1017,
+      "variant_id": 89,
+      "n_steps": 287,
+      "aborted": false,
+      "final_err_mm": 71.55208583499412,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1017,
+      "variant_id": 90,
+      "n_steps": 292,
+      "aborted": false,
+      "final_err_mm": 58.662228765982725,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1017,
+      "variant_id": 91,
+      "n_steps": 303,
+      "aborted": false,
+      "final_err_mm": 70.82652418150352,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1025,
+      "variant_id": 92,
+      "n_steps": 302,
+      "aborted": false,
+      "final_err_mm": 6.348496850194184,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1025,
+      "variant_id": 93,
+      "n_steps": 287,
+      "aborted": false,
+      "final_err_mm": 9.79384162081287,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1025,
+      "variant_id": 94,
+      "n_steps": 296,
+      "aborted": false,
+      "final_err_mm": 13.805165868198898,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1033,
+      "variant_id": 95,
+      "n_steps": 305,
+      "aborted": false,
+      "final_err_mm": 9.137700198764374,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1033,
+      "variant_id": 96,
+      "n_steps": 306,
+      "aborted": false,
+      "final_err_mm": 5.664168804071832,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1033,
+      "variant_id": 97,
+      "n_steps": 290,
+      "aborted": false,
+      "final_err_mm": 9.560541181506725,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1041,
+      "variant_id": 98,
+      "n_steps": 291,
+      "aborted": false,
+      "final_err_mm": 13.08217418889663,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1041,
+      "variant_id": 99,
+      "n_steps": 284,
+      "aborted": false,
+      "final_err_mm": 7.12209204362028,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1041,
+      "variant_id": 100,
+      "n_steps": 288,
+      "aborted": false,
+      "final_err_mm": 12.459412240808515,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1049,
+      "variant_id": 101,
+      "n_steps": 278,
+      "aborted": false,
+      "final_err_mm": 23.443772587189354,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1049,
+      "variant_id": 102,
+      "n_steps": 280,
+      "aborted": false,
+      "final_err_mm": 24.284112918422725,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1049,
+      "variant_id": 103,
+      "n_steps": 291,
+      "aborted": false,
+      "final_err_mm": 22.743258871155653,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1057,
+      "variant_id": 104,
+      "n_steps": 297,
+      "aborted": false,
+      "final_err_mm": 93.27450134517788,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1057,
+      "variant_id": 105,
+      "n_steps": 290,
+      "aborted": false,
+      "final_err_mm": 91.43907468369656,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1057,
+      "variant_id": 106,
+      "n_steps": 296,
+      "aborted": false,
+      "final_err_mm": 86.81776567031262,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1065,
+      "variant_id": 107,
+      "n_steps": 283,
+      "aborted": false,
+      "final_err_mm": 14.587026807540235,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1065,
+      "variant_id": 108,
+      "n_steps": 278,
+      "aborted": false,
+      "final_err_mm": 16.359202101310224,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1065,
+      "variant_id": 109,
+      "n_steps": 280,
+      "aborted": false,
+      "final_err_mm": 14.297111744794476,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1073,
+      "variant_id": 110,
+      "n_steps": 291,
+      "aborted": false,
+      "final_err_mm": 12.898854139121047,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1073,
+      "variant_id": 111,
+      "n_steps": 300,
+      "aborted": false,
+      "final_err_mm": 14.588899137718546,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1073,
+      "variant_id": 112,
+      "n_steps": 289,
+      "aborted": false,
+      "final_err_mm": 11.985231732647696,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1081,
+      "variant_id": 113,
+      "n_steps": 290,
+      "aborted": false,
+      "final_err_mm": 77.14771074550804,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1081,
+      "variant_id": 114,
+      "n_steps": 275,
+      "aborted": false,
+      "final_err_mm": 81.60583511106061,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1081,
+      "variant_id": 115,
+      "n_steps": 303,
+      "aborted": false,
+      "final_err_mm": 67.77697512135313,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1089,
+      "variant_id": 116,
+      "n_steps": 296,
+      "aborted": false,
+      "final_err_mm": 8.776376539751094,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1089,
+      "variant_id": 117,
+      "n_steps": 296,
+      "aborted": false,
+      "final_err_mm": 9.932248571463944,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1089,
+      "variant_id": 118,
+      "n_steps": 288,
+      "aborted": false,
+      "final_err_mm": 11.993261128961182,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1097,
+      "variant_id": 119,
+      "n_steps": 298,
+      "aborted": false,
+      "final_err_mm": 69.44784371692417,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1097,
+      "variant_id": 120,
+      "n_steps": 295,
+      "aborted": false,
+      "final_err_mm": 71.27354421221594,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1097,
+      "variant_id": 121,
+      "n_steps": 302,
+      "aborted": false,
+      "final_err_mm": 72.39014057309434,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1105,
+      "variant_id": 122,
+      "n_steps": 302,
+      "aborted": false,
+      "final_err_mm": 5.595045762614804,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1105,
+      "variant_id": 123,
+      "n_steps": 295,
+      "aborted": false,
+      "final_err_mm": 13.45672834611039,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1105,
+      "variant_id": 124,
+      "n_steps": 297,
+      "aborted": false,
+      "final_err_mm": 11.468425936739095,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1113,
+      "variant_id": 125,
+      "n_steps": 325,
+      "aborted": false,
+      "final_err_mm": 30.821091735321517,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1113,
+      "variant_id": 126,
+      "n_steps": 300,
+      "aborted": false,
+      "final_err_mm": 23.02546506769482,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1113,
+      "variant_id": 127,
+      "n_steps": 307,
+      "aborted": false,
+      "final_err_mm": 43.061484411542146,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1121,
+      "variant_id": 128,
+      "n_steps": 297,
+      "aborted": false,
+      "final_err_mm": 6.110020454932721,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1121,
+      "variant_id": 129,
+      "n_steps": 288,
+      "aborted": false,
+      "final_err_mm": 6.344028881317559,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1121,
+      "variant_id": 130,
+      "n_steps": 283,
+      "aborted": false,
+      "final_err_mm": 6.525995120452588,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1129,
+      "variant_id": 131,
+      "n_steps": 281,
+      "aborted": false,
+      "final_err_mm": 9.773039309431049,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1129,
+      "variant_id": 132,
+      "n_steps": 279,
+      "aborted": false,
+      "final_err_mm": 14.886811741564035,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1129,
+      "variant_id": 133,
+      "n_steps": 279,
+      "aborted": false,
+      "final_err_mm": 11.94120586044539,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1137,
+      "variant_id": 134,
+      "n_steps": 293,
+      "aborted": false,
+      "final_err_mm": 117.3091021973651,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1137,
+      "variant_id": 135,
+      "n_steps": 279,
+      "aborted": false,
+      "final_err_mm": 117.71509537290564,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1137,
+      "variant_id": 136,
+      "n_steps": 282,
+      "aborted": false,
+      "final_err_mm": 118.58308799290559,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1145,
+      "variant_id": 137,
+      "n_steps": 286,
+      "aborted": false,
+      "final_err_mm": 13.172841748656753,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1145,
+      "variant_id": 138,
+      "n_steps": 281,
+      "aborted": false,
+      "final_err_mm": 13.429108971229658,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1145,
+      "variant_id": 139,
+      "n_steps": 284,
+      "aborted": false,
+      "final_err_mm": 10.564142733094922,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1153,
+      "variant_id": 140,
+      "n_steps": 307,
+      "aborted": false,
+      "final_err_mm": 12.2360455369532,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1153,
+      "variant_id": 141,
+      "n_steps": 298,
+      "aborted": false,
+      "final_err_mm": 6.738645050327649,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1153,
+      "variant_id": 142,
+      "n_steps": 310,
+      "aborted": false,
+      "final_err_mm": 6.487936239385457,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1161,
+      "variant_id": 143,
+      "n_steps": 313,
+      "aborted": false,
+      "final_err_mm": 9.070606588273847,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1161,
+      "variant_id": 144,
+      "n_steps": 312,
+      "aborted": false,
+      "final_err_mm": 10.039951745353598,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1161,
+      "variant_id": 145,
+      "n_steps": 323,
+      "aborted": false,
+      "final_err_mm": 13.280998682104757,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1169,
+      "variant_id": 146,
+      "n_steps": 304,
+      "aborted": false,
+      "final_err_mm": 21.484659421538904,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1169,
+      "variant_id": 147,
+      "n_steps": 300,
+      "aborted": false,
+      "final_err_mm": 20.41986726332683,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1169,
+      "variant_id": 148,
+      "n_steps": 290,
+      "aborted": false,
+      "final_err_mm": 19.89457388500263,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1177,
+      "variant_id": 149,
+      "n_steps": 300,
+      "aborted": false,
+      "final_err_mm": 10.097709380430878,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1177,
+      "variant_id": 150,
+      "n_steps": 304,
+      "aborted": false,
+      "final_err_mm": 1.9465937037366852,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1177,
+      "variant_id": 151,
+      "n_steps": 304,
+      "aborted": false,
+      "final_err_mm": 10.3304774652687,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1185,
+      "variant_id": 152,
+      "n_steps": 277,
+      "aborted": false,
+      "final_err_mm": 13.913353812122812,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1185,
+      "variant_id": 153,
+      "n_steps": 294,
+      "aborted": false,
+      "final_err_mm": 6.474862231361032,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1185,
+      "variant_id": 154,
+      "n_steps": 284,
+      "aborted": false,
+      "final_err_mm": 13.258083325873336,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1193,
+      "variant_id": 155,
+      "n_steps": 297,
+      "aborted": false,
+      "final_err_mm": 34.27280263007393,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1193,
+      "variant_id": 156,
+      "n_steps": 291,
+      "aborted": false,
+      "final_err_mm": 39.11049240302085,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1193,
+      "variant_id": 157,
+      "n_steps": 298,
+      "aborted": false,
+      "final_err_mm": 32.98149896555122,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1000001,
+      "variant_id": 158,
+      "n_steps": 319,
+      "aborted": false,
+      "final_err_mm": 8.416226130405398,
+      "is_decision_pt": true
+    },
+    {
+      "seed": 1000001,
+      "variant_id": 159,
+      "n_steps": 319,
+      "aborted": false,
+      "final_err_mm": 10.93785720781978,
+      "is_decision_pt": true
+    },
+    {
+      "seed": 1000009,
+      "variant_id": 160,
+      "n_steps": 319,
+      "aborted": false,
+      "final_err_mm": 13.008710935006894,
+      "is_decision_pt": true
+    },
+    {
+      "seed": 1000009,
+      "variant_id": 161,
+      "n_steps": 319,
+      "aborted": false,
+      "final_err_mm": 15.392946122248437,
+      "is_decision_pt": true
+    },
+    {
+      "seed": 1000017,
+      "variant_id": 162,
+      "n_steps": 313,
+      "aborted": false,
+      "final_err_mm": 13.176847034695932,
+      "is_decision_pt": true
+    },
+    {
+      "seed": 1000017,
+      "variant_id": 163,
+      "n_steps": 321,
+      "aborted": false,
+      "final_err_mm": 13.343642089467071,
+      "is_decision_pt": true
+    },
+    {
+      "seed": 1000025,
+      "variant_id": 164,
+      "n_steps": 324,
+      "aborted": false,
+      "final_err_mm": 15.300640801521205,
+      "is_decision_pt": true
+    },
+    {
+      "seed": 1000025,
+      "variant_id": 165,
+      "n_steps": 323,
+      "aborted": false,
+      "final_err_mm": 9.661408023647313,
+      "is_decision_pt": true
+    },
+    {
+      "seed": 1002,
+      "variant_id": 166,
+      "n_steps": 279,
+      "aborted": false,
+      "final_err_mm": 13.85701160935913,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1002,
+      "variant_id": 167,
+      "n_steps": 276,
+      "aborted": false,
+      "final_err_mm": 16.028586211968108,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1002,
+      "variant_id": 168,
+      "n_steps": 276,
+      "aborted": false,
+      "final_err_mm": 11.473914824904904,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1010,
+      "variant_id": 169,
+      "n_steps": 291,
+      "aborted": false,
+      "final_err_mm": 15.88272427341333,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1010,
+      "variant_id": 170,
+      "n_steps": 285,
+      "aborted": false,
+      "final_err_mm": 11.877500877580996,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1010,
+      "variant_id": 171,
+      "n_steps": 293,
+      "aborted": false,
+      "final_err_mm": 11.767396354164156,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1018,
+      "variant_id": 172,
+      "n_steps": 283,
+      "aborted": false,
+      "final_err_mm": 10.55762767997564,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1018,
+      "variant_id": 173,
+      "n_steps": 293,
+      "aborted": false,
+      "final_err_mm": 5.030939097449915,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1018,
+      "variant_id": 174,
+      "n_steps": 302,
+      "aborted": false,
+      "final_err_mm": 13.586746721196823,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1026,
+      "variant_id": 175,
+      "n_steps": 308,
+      "aborted": false,
+      "final_err_mm": 16.925872967244473,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1026,
+      "variant_id": 176,
+      "n_steps": 300,
+      "aborted": false,
+      "final_err_mm": 13.966589033954097,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1026,
+      "variant_id": 177,
+      "n_steps": 301,
+      "aborted": false,
+      "final_err_mm": 10.338217906095474,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1034,
+      "variant_id": 178,
+      "n_steps": 276,
+      "aborted": false,
+      "final_err_mm": 8.303333159757893,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1034,
+      "variant_id": 179,
+      "n_steps": 276,
+      "aborted": false,
+      "final_err_mm": 11.996534312614635,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1034,
+      "variant_id": 180,
+      "n_steps": 281,
+      "aborted": false,
+      "final_err_mm": 11.250569351461666,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1042,
+      "variant_id": 181,
+      "n_steps": 281,
+      "aborted": false,
+      "final_err_mm": 8.973695662812686,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1042,
+      "variant_id": 182,
+      "n_steps": 299,
+      "aborted": false,
+      "final_err_mm": 12.77090933028387,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1042,
+      "variant_id": 183,
+      "n_steps": 282,
+      "aborted": false,
+      "final_err_mm": 12.825290358305068,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1050,
+      "variant_id": 184,
+      "n_steps": 282,
+      "aborted": false,
+      "final_err_mm": 6.959787913380896,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1050,
+      "variant_id": 185,
+      "n_steps": 281,
+      "aborted": false,
+      "final_err_mm": 7.045492449681526,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1050,
+      "variant_id": 186,
+      "n_steps": 284,
+      "aborted": false,
+      "final_err_mm": 6.432623645502187,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1058,
+      "variant_id": 187,
+      "n_steps": 308,
+      "aborted": false,
+      "final_err_mm": 23.5050179875819,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1058,
+      "variant_id": 188,
+      "n_steps": 285,
+      "aborted": false,
+      "final_err_mm": 28.497265757940074,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1058,
+      "variant_id": 189,
+      "n_steps": 287,
+      "aborted": false,
+      "final_err_mm": 28.161114185235828,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1066,
+      "variant_id": 190,
+      "n_steps": 282,
+      "aborted": false,
+      "final_err_mm": 12.757217896437528,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1066,
+      "variant_id": 191,
+      "n_steps": 284,
+      "aborted": false,
+      "final_err_mm": 15.504524405924426,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1066,
+      "variant_id": 192,
+      "n_steps": 296,
+      "aborted": false,
+      "final_err_mm": 19.55753062086198,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1074,
+      "variant_id": 193,
+      "n_steps": 278,
+      "aborted": false,
+      "final_err_mm": 12.123469302585962,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1074,
+      "variant_id": 194,
+      "n_steps": 280,
+      "aborted": false,
+      "final_err_mm": 8.603322197519944,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1074,
+      "variant_id": 195,
+      "n_steps": 280,
+      "aborted": false,
+      "final_err_mm": 11.64439380605304,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1082,
+      "variant_id": 196,
+      "n_steps": 309,
+      "aborted": false,
+      "final_err_mm": 11.039202901959639,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1082,
+      "variant_id": 197,
+      "n_steps": 284,
+      "aborted": false,
+      "final_err_mm": 14.968906385012962,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1082,
+      "variant_id": 198,
+      "n_steps": 292,
+      "aborted": false,
+      "final_err_mm": 10.383028808536832,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1090,
+      "variant_id": 199,
+      "n_steps": 294,
+      "aborted": false,
+      "final_err_mm": 10.825747179227136,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1090,
+      "variant_id": 200,
+      "n_steps": 281,
+      "aborted": false,
+      "final_err_mm": 9.212417049199077,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1090,
+      "variant_id": 201,
+      "n_steps": 297,
+      "aborted": false,
+      "final_err_mm": 8.454113672922071,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1098,
+      "variant_id": 202,
+      "n_steps": 292,
+      "aborted": false,
+      "final_err_mm": 11.288506570435592,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1098,
+      "variant_id": 203,
+      "n_steps": 290,
+      "aborted": false,
+      "final_err_mm": 13.202765026209217,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1098,
+      "variant_id": 204,
+      "n_steps": 307,
+      "aborted": false,
+      "final_err_mm": 3.8014106431770354,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1106,
+      "variant_id": 205,
+      "n_steps": 308,
+      "aborted": false,
+      "final_err_mm": 7.228198655022772,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1106,
+      "variant_id": 206,
+      "n_steps": 294,
+      "aborted": false,
+      "final_err_mm": 10.263398594092125,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1106,
+      "variant_id": 207,
+      "n_steps": 292,
+      "aborted": false,
+      "final_err_mm": 12.872444461652323,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1114,
+      "variant_id": 208,
+      "n_steps": 277,
+      "aborted": false,
+      "final_err_mm": 17.083386219365483,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1114,
+      "variant_id": 209,
+      "n_steps": 286,
+      "aborted": false,
+      "final_err_mm": 7.93458763773618,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1114,
+      "variant_id": 210,
+      "n_steps": 294,
+      "aborted": false,
+      "final_err_mm": 17.62436908015633,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1122,
+      "variant_id": 211,
+      "n_steps": 279,
+      "aborted": false,
+      "final_err_mm": 15.751531158544523,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1122,
+      "variant_id": 212,
+      "n_steps": 279,
+      "aborted": false,
+      "final_err_mm": 14.191100234269038,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1122,
+      "variant_id": 213,
+      "n_steps": 281,
+      "aborted": false,
+      "final_err_mm": 18.51091429064924,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1130,
+      "variant_id": 214,
+      "n_steps": 302,
+      "aborted": false,
+      "final_err_mm": 16.682626543422092,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1130,
+      "variant_id": 215,
+      "n_steps": 304,
+      "aborted": false,
+      "final_err_mm": 23.187067097743505,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1130,
+      "variant_id": 216,
+      "n_steps": 289,
+      "aborted": false,
+      "final_err_mm": 18.98265110850928,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1138,
+      "variant_id": 217,
+      "n_steps": 284,
+      "aborted": false,
+      "final_err_mm": 12.633942413223087,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1138,
+      "variant_id": 218,
+      "n_steps": 301,
+      "aborted": false,
+      "final_err_mm": 9.776205737925228,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1138,
+      "variant_id": 219,
+      "n_steps": 289,
+      "aborted": false,
+      "final_err_mm": 11.544403287445345,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1146,
+      "variant_id": 220,
+      "n_steps": 293,
+      "aborted": false,
+      "final_err_mm": 16.100161517328587,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1146,
+      "variant_id": 221,
+      "n_steps": 301,
+      "aborted": false,
+      "final_err_mm": 3.142456659595309,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1146,
+      "variant_id": 222,
+      "n_steps": 283,
+      "aborted": false,
+      "final_err_mm": 11.266386693452459,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1154,
+      "variant_id": 223,
+      "n_steps": 286,
+      "aborted": false,
+      "final_err_mm": 13.293091081353205,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1154,
+      "variant_id": 224,
+      "n_steps": 300,
+      "aborted": false,
+      "final_err_mm": 14.033218886734309,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1154,
+      "variant_id": 225,
+      "n_steps": 290,
+      "aborted": false,
+      "final_err_mm": 11.052630564920417,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1162,
+      "variant_id": 226,
+      "n_steps": 299,
+      "aborted": false,
+      "final_err_mm": 21.85844164375683,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1162,
+      "variant_id": 227,
+      "n_steps": 284,
+      "aborted": false,
+      "final_err_mm": 16.795730490333266,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1162,
+      "variant_id": 228,
+      "n_steps": 287,
+      "aborted": false,
+      "final_err_mm": 21.351146652694133,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1170,
+      "variant_id": 229,
+      "n_steps": 301,
+      "aborted": false,
+      "final_err_mm": 61.10315634033075,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1170,
+      "variant_id": 230,
+      "n_steps": 298,
+      "aborted": false,
+      "final_err_mm": 53.51575377071286,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1170,
+      "variant_id": 231,
+      "n_steps": 310,
+      "aborted": false,
+      "final_err_mm": 39.7729136099149,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1178,
+      "variant_id": 232,
+      "n_steps": 275,
+      "aborted": false,
+      "final_err_mm": 30.008006338235845,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1178,
+      "variant_id": 233,
+      "n_steps": 274,
+      "aborted": false,
+      "final_err_mm": 36.812309836317986,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1178,
+      "variant_id": 234,
+      "n_steps": 276,
+      "aborted": false,
+      "final_err_mm": 34.96506752213087,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1186,
+      "variant_id": 235,
+      "n_steps": 304,
+      "aborted": false,
+      "final_err_mm": 12.812618983462396,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1186,
+      "variant_id": 236,
+      "n_steps": 312,
+      "aborted": false,
+      "final_err_mm": 1.781050119778288,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1186,
+      "variant_id": 237,
+      "n_steps": 290,
+      "aborted": false,
+      "final_err_mm": 8.791180481825243,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1194,
+      "variant_id": 238,
+      "n_steps": 282,
+      "aborted": false,
+      "final_err_mm": 17.417274191854442,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1194,
+      "variant_id": 239,
+      "n_steps": 281,
+      "aborted": false,
+      "final_err_mm": 20.402987939177475,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1194,
+      "variant_id": 240,
+      "n_steps": 283,
+      "aborted": false,
+      "final_err_mm": 14.714483050202656,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1000002,
+      "variant_id": 241,
+      "n_steps": 319,
+      "aborted": false,
+      "final_err_mm": 11.26113378498882,
+      "is_decision_pt": true
+    },
+    {
+      "seed": 1000002,
+      "variant_id": 242,
+      "n_steps": 317,
+      "aborted": false,
+      "final_err_mm": 14.00040990072754,
+      "is_decision_pt": true
+    },
+    {
+      "seed": 1000010,
+      "variant_id": 243,
+      "n_steps": 322,
+      "aborted": false,
+      "final_err_mm": 10.207717500980447,
+      "is_decision_pt": true
+    },
+    {
+      "seed": 1000010,
+      "variant_id": 244,
+      "n_steps": 316,
+      "aborted": false,
+      "final_err_mm": 11.277389399997295,
+      "is_decision_pt": true
+    },
+    {
+      "seed": 1000018,
+      "variant_id": 245,
+      "n_steps": 311,
+      "aborted": false,
+      "final_err_mm": 27.390650691059633,
+      "is_decision_pt": true
+    },
+    {
+      "seed": 1000018,
+      "variant_id": 246,
+      "n_steps": 313,
+      "aborted": false,
+      "final_err_mm": 28.76276163879187,
+      "is_decision_pt": true
+    },
+    {
+      "seed": 1000026,
+      "variant_id": 247,
+      "n_steps": 319,
+      "aborted": false,
+      "final_err_mm": 8.185760675486573,
+      "is_decision_pt": true
+    },
+    {
+      "seed": 1000026,
+      "variant_id": 248,
+      "n_steps": 327,
+      "aborted": false,
+      "final_err_mm": 15.086437510237861,
+      "is_decision_pt": true
+    },
+    {
+      "seed": 1003,
+      "variant_id": 249,
+      "n_steps": 276,
+      "aborted": false,
+      "final_err_mm": 5.904834080481215,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1003,
+      "variant_id": 250,
+      "n_steps": 277,
+      "aborted": false,
+      "final_err_mm": 14.313057913380907,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1003,
+      "variant_id": 251,
+      "n_steps": 278,
+      "aborted": false,
+      "final_err_mm": 10.405066400440095,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1011,
+      "variant_id": 252,
+      "n_steps": 295,
+      "aborted": false,
+      "final_err_mm": 13.296853111382559,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1011,
+      "variant_id": 253,
+      "n_steps": 292,
+      "aborted": false,
+      "final_err_mm": 9.20199109441499,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1011,
+      "variant_id": 254,
+      "n_steps": 296,
+      "aborted": false,
+      "final_err_mm": 7.818898321394829,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1019,
+      "variant_id": 255,
+      "n_steps": 297,
+      "aborted": false,
+      "final_err_mm": 9.114875636167255,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1019,
+      "variant_id": 256,
+      "n_steps": 311,
+      "aborted": false,
+      "final_err_mm": 8.304717627803843,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1019,
+      "variant_id": 257,
+      "n_steps": 305,
+      "aborted": false,
+      "final_err_mm": 15.226513344662143,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1027,
+      "variant_id": 258,
+      "n_steps": 290,
+      "aborted": false,
+      "final_err_mm": 145.86523044834598,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1027,
+      "variant_id": 259,
+      "n_steps": 290,
+      "aborted": false,
+      "final_err_mm": 145.99182136467186,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1027,
+      "variant_id": 260,
+      "n_steps": 295,
+      "aborted": false,
+      "final_err_mm": 148.85223783232786,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1035,
+      "variant_id": 261,
+      "n_steps": 281,
+      "aborted": false,
+      "final_err_mm": 11.3481332310502,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1035,
+      "variant_id": 262,
+      "n_steps": 293,
+      "aborted": false,
+      "final_err_mm": 6.55621763685743,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1035,
+      "variant_id": 263,
+      "n_steps": 282,
+      "aborted": false,
+      "final_err_mm": 8.014583995180077,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1043,
+      "variant_id": 264,
+      "n_steps": 285,
+      "aborted": false,
+      "final_err_mm": 10.71047952328624,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1043,
+      "variant_id": 265,
+      "n_steps": 286,
+      "aborted": false,
+      "final_err_mm": 9.201692770903358,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1043,
+      "variant_id": 266,
+      "n_steps": 299,
+      "aborted": false,
+      "final_err_mm": 7.338258073420628,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1051,
+      "variant_id": 267,
+      "n_steps": 282,
+      "aborted": false,
+      "final_err_mm": 9.318156873283838,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1051,
+      "variant_id": 268,
+      "n_steps": 289,
+      "aborted": false,
+      "final_err_mm": 12.481531248764728,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1051,
+      "variant_id": 269,
+      "n_steps": 284,
+      "aborted": false,
+      "final_err_mm": 13.890240739825682,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1059,
+      "variant_id": 270,
+      "n_steps": 288,
+      "aborted": false,
+      "final_err_mm": 16.844524873420944,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1059,
+      "variant_id": 271,
+      "n_steps": 281,
+      "aborted": false,
+      "final_err_mm": 17.039390726455334,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1059,
+      "variant_id": 272,
+      "n_steps": 291,
+      "aborted": false,
+      "final_err_mm": 17.10662853175462,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1067,
+      "variant_id": 273,
+      "n_steps": 298,
+      "aborted": false,
+      "final_err_mm": 18.162832181965367,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1067,
+      "variant_id": 274,
+      "n_steps": 296,
+      "aborted": false,
+      "final_err_mm": 4.718791387719145,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1067,
+      "variant_id": 275,
+      "n_steps": 297,
+      "aborted": false,
+      "final_err_mm": 4.94702211549351,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1075,
+      "variant_id": 276,
+      "n_steps": 296,
+      "aborted": false,
+      "final_err_mm": 10.358305446134567,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1075,
+      "variant_id": 277,
+      "n_steps": 290,
+      "aborted": false,
+      "final_err_mm": 8.01387039661245,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1075,
+      "variant_id": 278,
+      "n_steps": 296,
+      "aborted": false,
+      "final_err_mm": 8.27022917099824,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1083,
+      "variant_id": 279,
+      "n_steps": 307,
+      "aborted": false,
+      "final_err_mm": 6.353177042361349,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1083,
+      "variant_id": 280,
+      "n_steps": 320,
+      "aborted": false,
+      "final_err_mm": 12.136800711362897,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1083,
+      "variant_id": 281,
+      "n_steps": 302,
+      "aborted": false,
+      "final_err_mm": 13.584649699644805,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1091,
+      "variant_id": 282,
+      "n_steps": 305,
+      "aborted": false,
+      "final_err_mm": 8.33763778967019,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1091,
+      "variant_id": 283,
+      "n_steps": 279,
+      "aborted": false,
+      "final_err_mm": 17.474354802758302,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1091,
+      "variant_id": 284,
+      "n_steps": 285,
+      "aborted": false,
+      "final_err_mm": 22.675119584313123,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1099,
+      "variant_id": 285,
+      "n_steps": 285,
+      "aborted": false,
+      "final_err_mm": 28.134155533378866,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1099,
+      "variant_id": 286,
+      "n_steps": 296,
+      "aborted": false,
+      "final_err_mm": 28.807462575393863,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1099,
+      "variant_id": 287,
+      "n_steps": 297,
+      "aborted": false,
+      "final_err_mm": 26.32288059807362,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1107,
+      "variant_id": 288,
+      "n_steps": 285,
+      "aborted": false,
+      "final_err_mm": 25.04891591022339,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1107,
+      "variant_id": 289,
+      "n_steps": 295,
+      "aborted": false,
+      "final_err_mm": 17.976469614074137,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1107,
+      "variant_id": 290,
+      "n_steps": 288,
+      "aborted": false,
+      "final_err_mm": 21.493260970919003,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1115,
+      "variant_id": 291,
+      "n_steps": 289,
+      "aborted": false,
+      "final_err_mm": 8.579826320512034,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1115,
+      "variant_id": 292,
+      "n_steps": 305,
+      "aborted": false,
+      "final_err_mm": 14.994027915559874,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1115,
+      "variant_id": 293,
+      "n_steps": 294,
+      "aborted": false,
+      "final_err_mm": 6.806752734002932,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1123,
+      "variant_id": 294,
+      "n_steps": 301,
+      "aborted": false,
+      "final_err_mm": 102.34540261172062,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1123,
+      "variant_id": 295,
+      "n_steps": 310,
+      "aborted": false,
+      "final_err_mm": 100.14904772638488,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1123,
+      "variant_id": 296,
+      "n_steps": 296,
+      "aborted": false,
+      "final_err_mm": 107.20633920721029,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1131,
+      "variant_id": 297,
+      "n_steps": 304,
+      "aborted": false,
+      "final_err_mm": 5.57962639697654,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1131,
+      "variant_id": 298,
+      "n_steps": 287,
+      "aborted": false,
+      "final_err_mm": 15.170516610068166,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1131,
+      "variant_id": 299,
+      "n_steps": 277,
+      "aborted": false,
+      "final_err_mm": 13.418868628693904,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1139,
+      "variant_id": 300,
+      "n_steps": 293,
+      "aborted": false,
+      "final_err_mm": 11.929051764154105,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1139,
+      "variant_id": 301,
+      "n_steps": 288,
+      "aborted": false,
+      "final_err_mm": 22.046725064127255,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1139,
+      "variant_id": 302,
+      "n_steps": 292,
+      "aborted": false,
+      "final_err_mm": 11.561990710816499,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1147,
+      "variant_id": 303,
+      "n_steps": 291,
+      "aborted": false,
+      "final_err_mm": 20.789135365261064,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1147,
+      "variant_id": 304,
+      "n_steps": 295,
+      "aborted": false,
+      "final_err_mm": 29.456394062800914,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1147,
+      "variant_id": 305,
+      "n_steps": 288,
+      "aborted": false,
+      "final_err_mm": 25.23871788181023,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1155,
+      "variant_id": 306,
+      "n_steps": 297,
+      "aborted": false,
+      "final_err_mm": 8.352799770442457,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1155,
+      "variant_id": 307,
+      "n_steps": 294,
+      "aborted": false,
+      "final_err_mm": 6.0024110222917955,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1155,
+      "variant_id": 308,
+      "n_steps": 301,
+      "aborted": false,
+      "final_err_mm": 9.593987295663695,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1163,
+      "variant_id": 309,
+      "n_steps": 301,
+      "aborted": false,
+      "final_err_mm": 10.46109303574987,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1163,
+      "variant_id": 310,
+      "n_steps": 287,
+      "aborted": false,
+      "final_err_mm": 6.8634995649652595,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1163,
+      "variant_id": 311,
+      "n_steps": 299,
+      "aborted": false,
+      "final_err_mm": 6.310494383423084,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1171,
+      "variant_id": 312,
+      "n_steps": 290,
+      "aborted": false,
+      "final_err_mm": 51.992320752772386,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1171,
+      "variant_id": 313,
+      "n_steps": 293,
+      "aborted": false,
+      "final_err_mm": 55.05431132067023,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1171,
+      "variant_id": 314,
+      "n_steps": 310,
+      "aborted": false,
+      "final_err_mm": 58.372102279400586,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1179,
+      "variant_id": 315,
+      "n_steps": 282,
+      "aborted": false,
+      "final_err_mm": 14.937563530246909,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1179,
+      "variant_id": 316,
+      "n_steps": 282,
+      "aborted": false,
+      "final_err_mm": 18.184132527061315,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1179,
+      "variant_id": 317,
+      "n_steps": 293,
+      "aborted": false,
+      "final_err_mm": 18.88002432774698,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1187,
+      "variant_id": 318,
+      "n_steps": 290,
+      "aborted": false,
+      "final_err_mm": 57.84424352048019,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1187,
+      "variant_id": 319,
+      "n_steps": 300,
+      "aborted": false,
+      "final_err_mm": 58.24258701335766,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1187,
+      "variant_id": 320,
+      "n_steps": 306,
+      "aborted": false,
+      "final_err_mm": 42.31528804751295,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1195,
+      "variant_id": 321,
+      "n_steps": 287,
+      "aborted": false,
+      "final_err_mm": 12.219326505939586,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1195,
+      "variant_id": 322,
+      "n_steps": 290,
+      "aborted": false,
+      "final_err_mm": 13.554193657844245,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1195,
+      "variant_id": 323,
+      "n_steps": 287,
+      "aborted": false,
+      "final_err_mm": 15.095381636456572,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1000003,
+      "variant_id": 324,
+      "n_steps": 324,
+      "aborted": false,
+      "final_err_mm": 20.737816932915084,
+      "is_decision_pt": true
+    },
+    {
+      "seed": 1000003,
+      "variant_id": 325,
+      "n_steps": 324,
+      "aborted": false,
+      "final_err_mm": 18.23774961549396,
+      "is_decision_pt": true
+    },
+    {
+      "seed": 1000011,
+      "variant_id": 326,
+      "n_steps": 319,
+      "aborted": false,
+      "final_err_mm": 12.046953732618038,
+      "is_decision_pt": true
+    },
+    {
+      "seed": 1000011,
+      "variant_id": 327,
+      "n_steps": 320,
+      "aborted": false,
+      "final_err_mm": 9.866721455630586,
+      "is_decision_pt": true
+    },
+    {
+      "seed": 1000019,
+      "variant_id": 328,
+      "n_steps": 313,
+      "aborted": false,
+      "final_err_mm": 6.986790743261303,
+      "is_decision_pt": true
+    },
+    {
+      "seed": 1000019,
+      "variant_id": 329,
+      "n_steps": 319,
+      "aborted": false,
+      "final_err_mm": 6.214229372086712,
+      "is_decision_pt": true
+    },
+    {
+      "seed": 1000027,
+      "variant_id": 330,
+      "n_steps": 321,
+      "aborted": false,
+      "final_err_mm": 9.451409705306876,
+      "is_decision_pt": true
+    },
+    {
+      "seed": 1000027,
+      "variant_id": 331,
+      "n_steps": 321,
+      "aborted": false,
+      "final_err_mm": 12.080215398645285,
+      "is_decision_pt": true
+    },
+    {
+      "seed": 1004,
+      "variant_id": 332,
+      "n_steps": 281,
+      "aborted": false,
+      "final_err_mm": 11.410787229161077,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1004,
+      "variant_id": 333,
+      "n_steps": 280,
+      "aborted": false,
+      "final_err_mm": 13.048101624820772,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1004,
+      "variant_id": 334,
+      "n_steps": 296,
+      "aborted": false,
+      "final_err_mm": 8.825064704990114,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1012,
+      "variant_id": 335,
+      "n_steps": 278,
+      "aborted": false,
+      "final_err_mm": 60.776108853584375,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1012,
+      "variant_id": 336,
+      "n_steps": 288,
+      "aborted": false,
+      "final_err_mm": 51.21225055610527,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1012,
+      "variant_id": 337,
+      "n_steps": 292,
+      "aborted": false,
+      "final_err_mm": 64.6487460097032,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1020,
+      "variant_id": 338,
+      "n_steps": 308,
+      "aborted": false,
+      "final_err_mm": 17.81336399978926,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1020,
+      "variant_id": 339,
+      "n_steps": 281,
+      "aborted": false,
+      "final_err_mm": 15.92657339716829,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1020,
+      "variant_id": 340,
+      "n_steps": 306,
+      "aborted": false,
+      "final_err_mm": 14.80408360281274,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1028,
+      "variant_id": 341,
+      "n_steps": 281,
+      "aborted": false,
+      "final_err_mm": 12.342720845190682,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1028,
+      "variant_id": 342,
+      "n_steps": 287,
+      "aborted": false,
+      "final_err_mm": 8.8988408570944,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1028,
+      "variant_id": 343,
+      "n_steps": 272,
+      "aborted": false,
+      "final_err_mm": 14.831944014127522,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1036,
+      "variant_id": 344,
+      "n_steps": 277,
+      "aborted": false,
+      "final_err_mm": 12.409018762862846,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1036,
+      "variant_id": 345,
+      "n_steps": 278,
+      "aborted": false,
+      "final_err_mm": 12.436366276646945,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1036,
+      "variant_id": 346,
+      "n_steps": 276,
+      "aborted": false,
+      "final_err_mm": 9.826803795911163,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1044,
+      "variant_id": 347,
+      "n_steps": 282,
+      "aborted": false,
+      "final_err_mm": 15.453239113531485,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1044,
+      "variant_id": 348,
+      "n_steps": 281,
+      "aborted": false,
+      "final_err_mm": 14.240862747399717,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1044,
+      "variant_id": 349,
+      "n_steps": 297,
+      "aborted": false,
+      "final_err_mm": 7.63499835965903,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1052,
+      "variant_id": 350,
+      "n_steps": 284,
+      "aborted": false,
+      "final_err_mm": 7.457765214824577,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1052,
+      "variant_id": 351,
+      "n_steps": 275,
+      "aborted": false,
+      "final_err_mm": 18.98837714954654,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1052,
+      "variant_id": 352,
+      "n_steps": 276,
+      "aborted": false,
+      "final_err_mm": 17.791314104428096,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1060,
+      "variant_id": 353,
+      "n_steps": 284,
+      "aborted": false,
+      "final_err_mm": 18.48096604677574,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1060,
+      "variant_id": 354,
+      "n_steps": 281,
+      "aborted": false,
+      "final_err_mm": 28.325020906246397,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1060,
+      "variant_id": 355,
+      "n_steps": 293,
+      "aborted": false,
+      "final_err_mm": 17.855293968784217,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1068,
+      "variant_id": 356,
+      "n_steps": 302,
+      "aborted": false,
+      "final_err_mm": 10.129319053392132,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1068,
+      "variant_id": 357,
+      "n_steps": 292,
+      "aborted": false,
+      "final_err_mm": 17.51123396947978,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1068,
+      "variant_id": 358,
+      "n_steps": 300,
+      "aborted": false,
+      "final_err_mm": 13.977114421458184,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1076,
+      "variant_id": 359,
+      "n_steps": 288,
+      "aborted": false,
+      "final_err_mm": 85.50174207637434,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1076,
+      "variant_id": 360,
+      "n_steps": 310,
+      "aborted": false,
+      "final_err_mm": 78.86292368388857,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1076,
+      "variant_id": 361,
+      "n_steps": 299,
+      "aborted": false,
+      "final_err_mm": 85.30052875377633,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1084,
+      "variant_id": 362,
+      "n_steps": 277,
+      "aborted": false,
+      "final_err_mm": 40.43297067556093,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1084,
+      "variant_id": 363,
+      "n_steps": 301,
+      "aborted": false,
+      "final_err_mm": 25.885077309418687,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1084,
+      "variant_id": 364,
+      "n_steps": 275,
+      "aborted": false,
+      "final_err_mm": 42.43350300492163,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1092,
+      "variant_id": 365,
+      "n_steps": 276,
+      "aborted": false,
+      "final_err_mm": 17.576122790535184,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1092,
+      "variant_id": 366,
+      "n_steps": 285,
+      "aborted": false,
+      "final_err_mm": 12.48557582060886,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1092,
+      "variant_id": 367,
+      "n_steps": 294,
+      "aborted": false,
+      "final_err_mm": 6.229408747480227,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1100,
+      "variant_id": 368,
+      "n_steps": 295,
+      "aborted": false,
+      "final_err_mm": 11.52134653029489,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1100,
+      "variant_id": 369,
+      "n_steps": 294,
+      "aborted": false,
+      "final_err_mm": 13.391022165504939,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1100,
+      "variant_id": 370,
+      "n_steps": 293,
+      "aborted": false,
+      "final_err_mm": 10.603163340500823,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1108,
+      "variant_id": 371,
+      "n_steps": 302,
+      "aborted": false,
+      "final_err_mm": 18.22139376934738,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1108,
+      "variant_id": 372,
+      "n_steps": 289,
+      "aborted": false,
+      "final_err_mm": 15.831189370087346,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1108,
+      "variant_id": 373,
+      "n_steps": 295,
+      "aborted": false,
+      "final_err_mm": 8.283433530318415,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1116,
+      "variant_id": 374,
+      "n_steps": 280,
+      "aborted": false,
+      "final_err_mm": 74.3272676385478,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1116,
+      "variant_id": 375,
+      "n_steps": 277,
+      "aborted": false,
+      "final_err_mm": 72.62144129501198,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1116,
+      "variant_id": 376,
+      "n_steps": 276,
+      "aborted": false,
+      "final_err_mm": 72.31327752920095,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1124,
+      "variant_id": 377,
+      "n_steps": 277,
+      "aborted": false,
+      "final_err_mm": 23.429835929211553,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1124,
+      "variant_id": 378,
+      "n_steps": 285,
+      "aborted": false,
+      "final_err_mm": 29.93021139587397,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1124,
+      "variant_id": 379,
+      "n_steps": 279,
+      "aborted": false,
+      "final_err_mm": 21.620237668700582,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1132,
+      "variant_id": 380,
+      "n_steps": 281,
+      "aborted": false,
+      "final_err_mm": 28.849624756716825,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1132,
+      "variant_id": 381,
+      "n_steps": 296,
+      "aborted": false,
+      "final_err_mm": 25.667449955635643,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1132,
+      "variant_id": 382,
+      "n_steps": 285,
+      "aborted": false,
+      "final_err_mm": 39.605955496028706,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1140,
+      "variant_id": 383,
+      "n_steps": 289,
+      "aborted": false,
+      "final_err_mm": 12.343313088995693,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1140,
+      "variant_id": 384,
+      "n_steps": 285,
+      "aborted": false,
+      "final_err_mm": 9.420819600386913,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1140,
+      "variant_id": 385,
+      "n_steps": 285,
+      "aborted": false,
+      "final_err_mm": 10.880535168733822,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1148,
+      "variant_id": 386,
+      "n_steps": 313,
+      "aborted": false,
+      "final_err_mm": 114.03987318677805,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1148,
+      "variant_id": 387,
+      "n_steps": 319,
+      "aborted": false,
+      "final_err_mm": 123.61524433776097,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1148,
+      "variant_id": 388,
+      "n_steps": 298,
+      "aborted": false,
+      "final_err_mm": 119.40555104729155,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1156,
+      "variant_id": 389,
+      "n_steps": 298,
+      "aborted": false,
+      "final_err_mm": 16.664577773052066,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1156,
+      "variant_id": 390,
+      "n_steps": 293,
+      "aborted": false,
+      "final_err_mm": 13.111597121502484,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1156,
+      "variant_id": 391,
+      "n_steps": 285,
+      "aborted": false,
+      "final_err_mm": 11.283464835997988,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1164,
+      "variant_id": 392,
+      "n_steps": 273,
+      "aborted": false,
+      "final_err_mm": 11.44995986348463,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1164,
+      "variant_id": 393,
+      "n_steps": 279,
+      "aborted": false,
+      "final_err_mm": 10.5585395219973,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1164,
+      "variant_id": 394,
+      "n_steps": 282,
+      "aborted": false,
+      "final_err_mm": 15.180116156409058,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1172,
+      "variant_id": 395,
+      "n_steps": 302,
+      "aborted": false,
+      "final_err_mm": 50.56627704930366,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1172,
+      "variant_id": 396,
+      "n_steps": 299,
+      "aborted": false,
+      "final_err_mm": 57.7479281380907,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1172,
+      "variant_id": 397,
+      "n_steps": 295,
+      "aborted": false,
+      "final_err_mm": 50.57745190418401,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1180,
+      "variant_id": 398,
+      "n_steps": 286,
+      "aborted": false,
+      "final_err_mm": 7.540511982482455,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1180,
+      "variant_id": 399,
+      "n_steps": 299,
+      "aborted": false,
+      "final_err_mm": 12.055706849229296,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1180,
+      "variant_id": 400,
+      "n_steps": 297,
+      "aborted": false,
+      "final_err_mm": 14.372036193175497,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1188,
+      "variant_id": 401,
+      "n_steps": 320,
+      "aborted": false,
+      "final_err_mm": 63.36799506416757,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1188,
+      "variant_id": 402,
+      "n_steps": 312,
+      "aborted": false,
+      "final_err_mm": 57.3895772439599,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1188,
+      "variant_id": 403,
+      "n_steps": 305,
+      "aborted": false,
+      "final_err_mm": 54.845931628650554,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1196,
+      "variant_id": 404,
+      "n_steps": 305,
+      "aborted": false,
+      "final_err_mm": 150.35693902438763,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1196,
+      "variant_id": 405,
+      "n_steps": 311,
+      "aborted": false,
+      "final_err_mm": 150.85044477557588,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1196,
+      "variant_id": 406,
+      "n_steps": 304,
+      "aborted": false,
+      "final_err_mm": 147.89603098505867,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1000004,
+      "variant_id": 407,
+      "n_steps": 320,
+      "aborted": false,
+      "final_err_mm": 7.323111052326427,
+      "is_decision_pt": true
+    },
+    {
+      "seed": 1000004,
+      "variant_id": 408,
+      "n_steps": 320,
+      "aborted": false,
+      "final_err_mm": 12.725062539972225,
+      "is_decision_pt": true
+    },
+    {
+      "seed": 1000012,
+      "variant_id": 409,
+      "n_steps": 318,
+      "aborted": false,
+      "final_err_mm": 13.276982720903654,
+      "is_decision_pt": true
+    },
+    {
+      "seed": 1000012,
+      "variant_id": 410,
+      "n_steps": 323,
+      "aborted": false,
+      "final_err_mm": 9.450446929632431,
+      "is_decision_pt": true
+    },
+    {
+      "seed": 1000020,
+      "variant_id": 411,
+      "n_steps": 320,
+      "aborted": false,
+      "final_err_mm": 15.884374194666966,
+      "is_decision_pt": true
+    },
+    {
+      "seed": 1000020,
+      "variant_id": 412,
+      "n_steps": 313,
+      "aborted": false,
+      "final_err_mm": 11.635554957636241,
+      "is_decision_pt": true
+    },
+    {
+      "seed": 1000028,
+      "variant_id": 413,
+      "n_steps": 314,
+      "aborted": false,
+      "final_err_mm": 12.417991985018764,
+      "is_decision_pt": true
+    },
+    {
+      "seed": 1000028,
+      "variant_id": 414,
+      "n_steps": 313,
+      "aborted": false,
+      "final_err_mm": 11.576537431129017,
+      "is_decision_pt": true
+    },
+    {
+      "seed": 1005,
+      "variant_id": 415,
+      "n_steps": 296,
+      "aborted": false,
+      "final_err_mm": 8.491822776033734,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1005,
+      "variant_id": 416,
+      "n_steps": 298,
+      "aborted": false,
+      "final_err_mm": 10.566340856598597,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1005,
+      "variant_id": 417,
+      "n_steps": 291,
+      "aborted": false,
+      "final_err_mm": 13.218383395875003,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1013,
+      "variant_id": 418,
+      "n_steps": 278,
+      "aborted": false,
+      "final_err_mm": 11.866683782219626,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1013,
+      "variant_id": 419,
+      "n_steps": 277,
+      "aborted": false,
+      "final_err_mm": 16.591874327195146,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1013,
+      "variant_id": 420,
+      "n_steps": 284,
+      "aborted": false,
+      "final_err_mm": 12.857387465579322,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1021,
+      "variant_id": 421,
+      "n_steps": 291,
+      "aborted": false,
+      "final_err_mm": 16.795676700082133,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1021,
+      "variant_id": 422,
+      "n_steps": 275,
+      "aborted": false,
+      "final_err_mm": 16.746213240075715,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1021,
+      "variant_id": 423,
+      "n_steps": 302,
+      "aborted": false,
+      "final_err_mm": 7.435735022917393,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1029,
+      "variant_id": 424,
+      "n_steps": 280,
+      "aborted": false,
+      "final_err_mm": 9.453101846130743,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1029,
+      "variant_id": 425,
+      "n_steps": 277,
+      "aborted": false,
+      "final_err_mm": 11.369410304553956,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1029,
+      "variant_id": 426,
+      "n_steps": 280,
+      "aborted": false,
+      "final_err_mm": 7.592755267029037,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1037,
+      "variant_id": 427,
+      "n_steps": 295,
+      "aborted": false,
+      "final_err_mm": 12.42078702992893,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1037,
+      "variant_id": 428,
+      "n_steps": 295,
+      "aborted": false,
+      "final_err_mm": 14.393805728124994,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1037,
+      "variant_id": 429,
+      "n_steps": 291,
+      "aborted": false,
+      "final_err_mm": 13.414216654731948,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1045,
+      "variant_id": 430,
+      "n_steps": 290,
+      "aborted": false,
+      "final_err_mm": 13.963791593116245,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1045,
+      "variant_id": 431,
+      "n_steps": 301,
+      "aborted": false,
+      "final_err_mm": 9.286071035089087,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1045,
+      "variant_id": 432,
+      "n_steps": 299,
+      "aborted": false,
+      "final_err_mm": 7.545927622286745,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1053,
+      "variant_id": 433,
+      "n_steps": 274,
+      "aborted": false,
+      "final_err_mm": 12.95738706565175,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1053,
+      "variant_id": 434,
+      "n_steps": 279,
+      "aborted": false,
+      "final_err_mm": 12.475620758947297,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1053,
+      "variant_id": 435,
+      "n_steps": 281,
+      "aborted": false,
+      "final_err_mm": 15.584495747240158,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1061,
+      "variant_id": 436,
+      "n_steps": 299,
+      "aborted": false,
+      "final_err_mm": 9.512754625704149,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1061,
+      "variant_id": 437,
+      "n_steps": 315,
+      "aborted": false,
+      "final_err_mm": 14.162983247991301,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1061,
+      "variant_id": 438,
+      "n_steps": 292,
+      "aborted": false,
+      "final_err_mm": 14.334506349570042,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1069,
+      "variant_id": 439,
+      "n_steps": 282,
+      "aborted": false,
+      "final_err_mm": 3.6812631683476083,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1069,
+      "variant_id": 440,
+      "n_steps": 279,
+      "aborted": false,
+      "final_err_mm": 3.431921799082126,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1069,
+      "variant_id": 441,
+      "n_steps": 268,
+      "aborted": false,
+      "final_err_mm": 7.641626357807709,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1077,
+      "variant_id": 442,
+      "n_steps": 284,
+      "aborted": false,
+      "final_err_mm": 9.026497653052953,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1077,
+      "variant_id": 443,
+      "n_steps": 290,
+      "aborted": false,
+      "final_err_mm": 11.269579074147513,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1077,
+      "variant_id": 444,
+      "n_steps": 293,
+      "aborted": false,
+      "final_err_mm": 14.714346736129448,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1085,
+      "variant_id": 445,
+      "n_steps": 300,
+      "aborted": false,
+      "final_err_mm": 123.0682042348666,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1085,
+      "variant_id": 446,
+      "n_steps": 293,
+      "aborted": false,
+      "final_err_mm": 125.3810793792997,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1085,
+      "variant_id": 447,
+      "n_steps": 283,
+      "aborted": false,
+      "final_err_mm": 126.52716165212661,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1093,
+      "variant_id": 448,
+      "n_steps": 281,
+      "aborted": false,
+      "final_err_mm": 16.51316395848755,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1093,
+      "variant_id": 449,
+      "n_steps": 287,
+      "aborted": false,
+      "final_err_mm": 13.514147537464483,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1093,
+      "variant_id": 450,
+      "n_steps": 280,
+      "aborted": false,
+      "final_err_mm": 6.732056156259698,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1101,
+      "variant_id": 451,
+      "n_steps": 321,
+      "aborted": false,
+      "final_err_mm": 212.7699995530173,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1101,
+      "variant_id": 452,
+      "n_steps": 329,
+      "aborted": false,
+      "final_err_mm": 211.8823042198312,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1101,
+      "variant_id": 453,
+      "n_steps": 321,
+      "aborted": false,
+      "final_err_mm": 210.60733892393296,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1109,
+      "variant_id": 454,
+      "n_steps": 284,
+      "aborted": false,
+      "final_err_mm": 33.090997793857454,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1109,
+      "variant_id": 455,
+      "n_steps": 292,
+      "aborted": false,
+      "final_err_mm": 38.94349189394856,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1109,
+      "variant_id": 456,
+      "n_steps": 282,
+      "aborted": false,
+      "final_err_mm": 26.60117059831287,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1117,
+      "variant_id": 457,
+      "n_steps": 301,
+      "aborted": false,
+      "final_err_mm": 15.998956829028664,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1117,
+      "variant_id": 458,
+      "n_steps": 282,
+      "aborted": false,
+      "final_err_mm": 14.751492164826681,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1117,
+      "variant_id": 459,
+      "n_steps": 284,
+      "aborted": false,
+      "final_err_mm": 18.105817873999428,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1125,
+      "variant_id": 460,
+      "n_steps": 304,
+      "aborted": false,
+      "final_err_mm": 103.76326451462188,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1125,
+      "variant_id": 461,
+      "n_steps": 320,
+      "aborted": false,
+      "final_err_mm": 95.65431674089967,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1125,
+      "variant_id": 462,
+      "n_steps": 315,
+      "aborted": false,
+      "final_err_mm": 105.87244264905802,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1133,
+      "variant_id": 463,
+      "n_steps": 287,
+      "aborted": false,
+      "final_err_mm": 13.173494149825402,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1133,
+      "variant_id": 464,
+      "n_steps": 297,
+      "aborted": false,
+      "final_err_mm": 12.357746916132978,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1133,
+      "variant_id": 465,
+      "n_steps": 285,
+      "aborted": false,
+      "final_err_mm": 11.068454608970077,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1141,
+      "variant_id": 466,
+      "n_steps": 279,
+      "aborted": false,
+      "final_err_mm": 11.832776012682386,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1141,
+      "variant_id": 467,
+      "n_steps": 281,
+      "aborted": false,
+      "final_err_mm": 9.416038074716251,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1141,
+      "variant_id": 468,
+      "n_steps": 282,
+      "aborted": false,
+      "final_err_mm": 14.673245333457762,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1149,
+      "variant_id": 469,
+      "n_steps": 295,
+      "aborted": false,
+      "final_err_mm": 12.230798479438706,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1149,
+      "variant_id": 470,
+      "n_steps": 290,
+      "aborted": false,
+      "final_err_mm": 4.363296091591966,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1149,
+      "variant_id": 471,
+      "n_steps": 281,
+      "aborted": false,
+      "final_err_mm": 13.626447557075782,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1157,
+      "variant_id": 472,
+      "n_steps": 284,
+      "aborted": false,
+      "final_err_mm": 14.976124548413685,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1157,
+      "variant_id": 473,
+      "n_steps": 309,
+      "aborted": false,
+      "final_err_mm": 5.8077896547066015,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1157,
+      "variant_id": 474,
+      "n_steps": 296,
+      "aborted": false,
+      "final_err_mm": 7.777675993176269,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1165,
+      "variant_id": 475,
+      "n_steps": 288,
+      "aborted": false,
+      "final_err_mm": 30.167611508311634,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1165,
+      "variant_id": 476,
+      "n_steps": 296,
+      "aborted": false,
+      "final_err_mm": 29.167830547165206,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1165,
+      "variant_id": 477,
+      "n_steps": 296,
+      "aborted": false,
+      "final_err_mm": 26.954396553519402,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1173,
+      "variant_id": 478,
+      "n_steps": 284,
+      "aborted": false,
+      "final_err_mm": 44.048738821160434,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1173,
+      "variant_id": 479,
+      "n_steps": 289,
+      "aborted": false,
+      "final_err_mm": 32.24037279228856,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1173,
+      "variant_id": 480,
+      "n_steps": 304,
+      "aborted": false,
+      "final_err_mm": 31.565416643663706,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1181,
+      "variant_id": 481,
+      "n_steps": 275,
+      "aborted": false,
+      "final_err_mm": 15.210895402208129,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1181,
+      "variant_id": 482,
+      "n_steps": 275,
+      "aborted": false,
+      "final_err_mm": 13.47498963376633,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1181,
+      "variant_id": 483,
+      "n_steps": 289,
+      "aborted": false,
+      "final_err_mm": 10.066180809832337,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1189,
+      "variant_id": 484,
+      "n_steps": 288,
+      "aborted": false,
+      "final_err_mm": 44.914063639902636,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1189,
+      "variant_id": 485,
+      "n_steps": 292,
+      "aborted": false,
+      "final_err_mm": 45.60092088106646,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1189,
+      "variant_id": 486,
+      "n_steps": 302,
+      "aborted": false,
+      "final_err_mm": 43.20932260051668,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1197,
+      "variant_id": 487,
+      "n_steps": 281,
+      "aborted": false,
+      "final_err_mm": 8.330980849068421,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1197,
+      "variant_id": 488,
+      "n_steps": 290,
+      "aborted": false,
+      "final_err_mm": 3.803609606449423,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1197,
+      "variant_id": 489,
+      "n_steps": 274,
+      "aborted": false,
+      "final_err_mm": 15.253253999705231,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1000005,
+      "variant_id": 490,
+      "n_steps": 322,
+      "aborted": false,
+      "final_err_mm": 13.192905397198253,
+      "is_decision_pt": true
+    },
+    {
+      "seed": 1000005,
+      "variant_id": 491,
+      "n_steps": 320,
+      "aborted": false,
+      "final_err_mm": 13.211799479176138,
+      "is_decision_pt": true
+    },
+    {
+      "seed": 1000013,
+      "variant_id": 492,
+      "n_steps": 320,
+      "aborted": false,
+      "final_err_mm": 13.332638590215097,
+      "is_decision_pt": true
+    },
+    {
+      "seed": 1000013,
+      "variant_id": 493,
+      "n_steps": 319,
+      "aborted": false,
+      "final_err_mm": 9.405510187155965,
+      "is_decision_pt": true
+    },
+    {
+      "seed": 1000021,
+      "variant_id": 494,
+      "n_steps": 318,
+      "aborted": false,
+      "final_err_mm": 11.555890110641533,
+      "is_decision_pt": true
+    },
+    {
+      "seed": 1000021,
+      "variant_id": 495,
+      "n_steps": 316,
+      "aborted": false,
+      "final_err_mm": 12.793233247617174,
+      "is_decision_pt": true
+    },
+    {
+      "seed": 1000029,
+      "variant_id": 496,
+      "n_steps": 322,
+      "aborted": false,
+      "final_err_mm": 15.014475640963708,
+      "is_decision_pt": true
+    },
+    {
+      "seed": 1000029,
+      "variant_id": 497,
+      "n_steps": 306,
+      "aborted": false,
+      "final_err_mm": 10.43049502130411,
+      "is_decision_pt": true
+    },
+    {
+      "seed": 1006,
+      "variant_id": 498,
+      "n_steps": 312,
+      "aborted": false,
+      "final_err_mm": 140.86124850996598,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1006,
+      "variant_id": 499,
+      "n_steps": 304,
+      "aborted": false,
+      "final_err_mm": 137.36791583740128,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1006,
+      "variant_id": 500,
+      "n_steps": 304,
+      "aborted": false,
+      "final_err_mm": 137.0392621983992,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1014,
+      "variant_id": 501,
+      "n_steps": 285,
+      "aborted": false,
+      "final_err_mm": 34.40394001230541,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1014,
+      "variant_id": 502,
+      "n_steps": 286,
+      "aborted": false,
+      "final_err_mm": 32.05391819545214,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1014,
+      "variant_id": 503,
+      "n_steps": 292,
+      "aborted": false,
+      "final_err_mm": 34.052360015487594,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1022,
+      "variant_id": 504,
+      "n_steps": 276,
+      "aborted": false,
+      "final_err_mm": 13.0520927508721,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1030,
+      "variant_id": 505,
+      "n_steps": 289,
+      "aborted": false,
+      "final_err_mm": 28.16246222249184,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1030,
+      "variant_id": 506,
+      "n_steps": 300,
+      "aborted": false,
+      "final_err_mm": 24.480487171440203,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1030,
+      "variant_id": 507,
+      "n_steps": 292,
+      "aborted": false,
+      "final_err_mm": 24.676284967816006,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1038,
+      "variant_id": 508,
+      "n_steps": 302,
+      "aborted": false,
+      "final_err_mm": 112.70903958421694,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1038,
+      "variant_id": 509,
+      "n_steps": 293,
+      "aborted": false,
+      "final_err_mm": 116.32685771682824,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1038,
+      "variant_id": 510,
+      "n_steps": 303,
+      "aborted": false,
+      "final_err_mm": 114.54552352208498,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1046,
+      "variant_id": 511,
+      "n_steps": 300,
+      "aborted": false,
+      "final_err_mm": 5.659263592350224,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1046,
+      "variant_id": 512,
+      "n_steps": 289,
+      "aborted": false,
+      "final_err_mm": 8.973392725748845,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1046,
+      "variant_id": 513,
+      "n_steps": 290,
+      "aborted": false,
+      "final_err_mm": 10.005421776418185,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1054,
+      "variant_id": 514,
+      "n_steps": 278,
+      "aborted": false,
+      "final_err_mm": 15.579495431860089,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1054,
+      "variant_id": 515,
+      "n_steps": 290,
+      "aborted": false,
+      "final_err_mm": 10.396783339266575,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1054,
+      "variant_id": 516,
+      "n_steps": 288,
+      "aborted": false,
+      "final_err_mm": 8.689467337774488,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1062,
+      "variant_id": 517,
+      "n_steps": 304,
+      "aborted": false,
+      "final_err_mm": 105.90663481496911,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1062,
+      "variant_id": 518,
+      "n_steps": 296,
+      "aborted": false,
+      "final_err_mm": 100.02856226354268,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1062,
+      "variant_id": 519,
+      "n_steps": 318,
+      "aborted": false,
+      "final_err_mm": 103.2713852831662,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1070,
+      "variant_id": 520,
+      "n_steps": 299,
+      "aborted": false,
+      "final_err_mm": 26.039539969713022,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1070,
+      "variant_id": 521,
+      "n_steps": 311,
+      "aborted": false,
+      "final_err_mm": 14.737167483042052,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1070,
+      "variant_id": 522,
+      "n_steps": 308,
+      "aborted": false,
+      "final_err_mm": 23.29261478281815,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1078,
+      "variant_id": 523,
+      "n_steps": 297,
+      "aborted": false,
+      "final_err_mm": 9.88351078835441,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1078,
+      "variant_id": 524,
+      "n_steps": 278,
+      "aborted": false,
+      "final_err_mm": 10.077342868053416,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1078,
+      "variant_id": 525,
+      "n_steps": 279,
+      "aborted": false,
+      "final_err_mm": 11.30650762231933,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1086,
+      "variant_id": 526,
+      "n_steps": 285,
+      "aborted": false,
+      "final_err_mm": 16.40748298823201,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1086,
+      "variant_id": 527,
+      "n_steps": 289,
+      "aborted": false,
+      "final_err_mm": 10.498085355384863,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1086,
+      "variant_id": 528,
+      "n_steps": 275,
+      "aborted": false,
+      "final_err_mm": 17.9237753839602,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1094,
+      "variant_id": 529,
+      "n_steps": 299,
+      "aborted": false,
+      "final_err_mm": 29.191160085146784,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1094,
+      "variant_id": 530,
+      "n_steps": 297,
+      "aborted": false,
+      "final_err_mm": 29.782639184495704,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1094,
+      "variant_id": 531,
+      "n_steps": 289,
+      "aborted": false,
+      "final_err_mm": 28.78139510652026,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1102,
+      "variant_id": 532,
+      "n_steps": 276,
+      "aborted": false,
+      "final_err_mm": 31.811887582845596,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1102,
+      "variant_id": 533,
+      "n_steps": 293,
+      "aborted": false,
+      "final_err_mm": 31.43274415737348,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1102,
+      "variant_id": 534,
+      "n_steps": 284,
+      "aborted": false,
+      "final_err_mm": 30.251459023419194,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1110,
+      "variant_id": 535,
+      "n_steps": 296,
+      "aborted": false,
+      "final_err_mm": 16.394755535718193,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1110,
+      "variant_id": 536,
+      "n_steps": 299,
+      "aborted": false,
+      "final_err_mm": 13.94805203986392,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1110,
+      "variant_id": 537,
+      "n_steps": 308,
+      "aborted": false,
+      "final_err_mm": 8.495856905692104,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1118,
+      "variant_id": 538,
+      "n_steps": 339,
+      "aborted": false,
+      "final_err_mm": 7.479962573343524,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1118,
+      "variant_id": 539,
+      "n_steps": 330,
+      "aborted": false,
+      "final_err_mm": 7.1919139576735,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1118,
+      "variant_id": 540,
+      "n_steps": 315,
+      "aborted": false,
+      "final_err_mm": 10.802521277063379,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1126,
+      "variant_id": 541,
+      "n_steps": 276,
+      "aborted": false,
+      "final_err_mm": 9.02604082864222,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1126,
+      "variant_id": 542,
+      "n_steps": 274,
+      "aborted": false,
+      "final_err_mm": 11.634803388263578,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1126,
+      "variant_id": 543,
+      "n_steps": 273,
+      "aborted": false,
+      "final_err_mm": 12.376628256499393,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1134,
+      "variant_id": 544,
+      "n_steps": 290,
+      "aborted": false,
+      "final_err_mm": 9.32405152868638,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1134,
+      "variant_id": 545,
+      "n_steps": 298,
+      "aborted": false,
+      "final_err_mm": 14.340484010691654,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1134,
+      "variant_id": 546,
+      "n_steps": 288,
+      "aborted": false,
+      "final_err_mm": 15.590728734538216,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1142,
+      "variant_id": 547,
+      "n_steps": 278,
+      "aborted": false,
+      "final_err_mm": 12.590451244628369,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1142,
+      "variant_id": 548,
+      "n_steps": 293,
+      "aborted": false,
+      "final_err_mm": 10.268457259051718,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1142,
+      "variant_id": 549,
+      "n_steps": 289,
+      "aborted": false,
+      "final_err_mm": 7.297415059515382,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1150,
+      "variant_id": 550,
+      "n_steps": 280,
+      "aborted": false,
+      "final_err_mm": 11.252227809122624,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1150,
+      "variant_id": 551,
+      "n_steps": 282,
+      "aborted": false,
+      "final_err_mm": 9.410920547655534,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1150,
+      "variant_id": 552,
+      "n_steps": 283,
+      "aborted": false,
+      "final_err_mm": 9.39110198524889,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1158,
+      "variant_id": 553,
+      "n_steps": 300,
+      "aborted": false,
+      "final_err_mm": 8.640124529160238,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1158,
+      "variant_id": 554,
+      "n_steps": 289,
+      "aborted": false,
+      "final_err_mm": 15.615224135571685,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1158,
+      "variant_id": 555,
+      "n_steps": 288,
+      "aborted": false,
+      "final_err_mm": 9.064522876824315,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1166,
+      "variant_id": 556,
+      "n_steps": 284,
+      "aborted": false,
+      "final_err_mm": 12.105784636684199,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1166,
+      "variant_id": 557,
+      "n_steps": 289,
+      "aborted": false,
+      "final_err_mm": 15.94317116481085,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1166,
+      "variant_id": 558,
+      "n_steps": 283,
+      "aborted": false,
+      "final_err_mm": 16.521345107065887,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1174,
+      "variant_id": 559,
+      "n_steps": 295,
+      "aborted": false,
+      "final_err_mm": 17.30452415127205,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1174,
+      "variant_id": 560,
+      "n_steps": 310,
+      "aborted": false,
+      "final_err_mm": 11.71922057513677,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1174,
+      "variant_id": 561,
+      "n_steps": 289,
+      "aborted": false,
+      "final_err_mm": 13.558373787657972,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1182,
+      "variant_id": 562,
+      "n_steps": 296,
+      "aborted": false,
+      "final_err_mm": 66.93056776418724,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1182,
+      "variant_id": 563,
+      "n_steps": 302,
+      "aborted": false,
+      "final_err_mm": 64.66683888942616,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1182,
+      "variant_id": 564,
+      "n_steps": 283,
+      "aborted": false,
+      "final_err_mm": 77.06812160888802,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1190,
+      "variant_id": 565,
+      "n_steps": 286,
+      "aborted": false,
+      "final_err_mm": 39.817020302923645,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1190,
+      "variant_id": 566,
+      "n_steps": 282,
+      "aborted": false,
+      "final_err_mm": 36.3048492889758,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1190,
+      "variant_id": 567,
+      "n_steps": 287,
+      "aborted": false,
+      "final_err_mm": 33.74663880373069,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1198,
+      "variant_id": 568,
+      "n_steps": 298,
+      "aborted": false,
+      "final_err_mm": 6.83742241201735,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1198,
+      "variant_id": 569,
+      "n_steps": 292,
+      "aborted": false,
+      "final_err_mm": 10.779593717045685,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1198,
+      "variant_id": 570,
+      "n_steps": 288,
+      "aborted": false,
+      "final_err_mm": 14.122226613477471,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1000006,
+      "variant_id": 571,
+      "n_steps": 316,
+      "aborted": false,
+      "final_err_mm": 11.212221435657327,
+      "is_decision_pt": true
+    },
+    {
+      "seed": 1000006,
+      "variant_id": 572,
+      "n_steps": 322,
+      "aborted": false,
+      "final_err_mm": 6.309087065315262,
+      "is_decision_pt": true
+    },
+    {
+      "seed": 1000014,
+      "variant_id": 573,
+      "n_steps": 321,
+      "aborted": false,
+      "final_err_mm": 10.936919264804594,
+      "is_decision_pt": true
+    },
+    {
+      "seed": 1000014,
+      "variant_id": 574,
+      "n_steps": 311,
+      "aborted": false,
+      "final_err_mm": 12.96564922043218,
+      "is_decision_pt": true
+    },
+    {
+      "seed": 1000022,
+      "variant_id": 575,
+      "n_steps": 327,
+      "aborted": false,
+      "final_err_mm": 14.058540452528744,
+      "is_decision_pt": true
+    },
+    {
+      "seed": 1000022,
+      "variant_id": 576,
+      "n_steps": 327,
+      "aborted": false,
+      "final_err_mm": 3.303636065193273,
+      "is_decision_pt": true
+    },
+    {
+      "seed": 1007,
+      "variant_id": 577,
+      "n_steps": 286,
+      "aborted": false,
+      "final_err_mm": 108.52520931367064,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1007,
+      "variant_id": 578,
+      "n_steps": 292,
+      "aborted": false,
+      "final_err_mm": 112.03329283392243,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1007,
+      "variant_id": 579,
+      "n_steps": 292,
+      "aborted": false,
+      "final_err_mm": 109.15390067674979,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1015,
+      "variant_id": 580,
+      "n_steps": 280,
+      "aborted": false,
+      "final_err_mm": 8.228831300175045,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1015,
+      "variant_id": 581,
+      "n_steps": 280,
+      "aborted": false,
+      "final_err_mm": 12.338306952986017,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1015,
+      "variant_id": 582,
+      "n_steps": 272,
+      "aborted": false,
+      "final_err_mm": 13.110016308435041,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1023,
+      "variant_id": 583,
+      "n_steps": 289,
+      "aborted": false,
+      "final_err_mm": 5.975228859828034,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1023,
+      "variant_id": 584,
+      "n_steps": 289,
+      "aborted": false,
+      "final_err_mm": 8.794620299037216,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1023,
+      "variant_id": 585,
+      "n_steps": 286,
+      "aborted": false,
+      "final_err_mm": 8.317493856935995,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1031,
+      "variant_id": 586,
+      "n_steps": 295,
+      "aborted": false,
+      "final_err_mm": 15.280844562409065,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1031,
+      "variant_id": 587,
+      "n_steps": 302,
+      "aborted": false,
+      "final_err_mm": 13.015989348806887,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1031,
+      "variant_id": 588,
+      "n_steps": 298,
+      "aborted": false,
+      "final_err_mm": 17.724298320838628,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1039,
+      "variant_id": 589,
+      "n_steps": 281,
+      "aborted": false,
+      "final_err_mm": 10.117464519619235,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1039,
+      "variant_id": 590,
+      "n_steps": 272,
+      "aborted": false,
+      "final_err_mm": 12.255127732519,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1039,
+      "variant_id": 591,
+      "n_steps": 274,
+      "aborted": false,
+      "final_err_mm": 12.60381312644685,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1047,
+      "variant_id": 592,
+      "n_steps": 280,
+      "aborted": false,
+      "final_err_mm": 43.76407186034846,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1047,
+      "variant_id": 593,
+      "n_steps": 282,
+      "aborted": false,
+      "final_err_mm": 35.57044337546099,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1047,
+      "variant_id": 594,
+      "n_steps": 283,
+      "aborted": false,
+      "final_err_mm": 32.42384546930676,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1055,
+      "variant_id": 595,
+      "n_steps": 301,
+      "aborted": false,
+      "final_err_mm": 32.03378885724611,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1055,
+      "variant_id": 596,
+      "n_steps": 285,
+      "aborted": false,
+      "final_err_mm": 39.41199195305123,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1055,
+      "variant_id": 597,
+      "n_steps": 291,
+      "aborted": false,
+      "final_err_mm": 25.33291597311296,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1063,
+      "variant_id": 598,
+      "n_steps": 285,
+      "aborted": false,
+      "final_err_mm": 11.455107116398686,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1063,
+      "variant_id": 599,
+      "n_steps": 294,
+      "aborted": false,
+      "final_err_mm": 6.149436067585841,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1063,
+      "variant_id": 600,
+      "n_steps": 286,
+      "aborted": false,
+      "final_err_mm": 16.047659234281355,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1071,
+      "variant_id": 601,
+      "n_steps": 298,
+      "aborted": false,
+      "final_err_mm": 12.188553240730236,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1071,
+      "variant_id": 602,
+      "n_steps": 290,
+      "aborted": false,
+      "final_err_mm": 26.799458669895884,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1071,
+      "variant_id": 603,
+      "n_steps": 289,
+      "aborted": false,
+      "final_err_mm": 14.617864472087234,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1079,
+      "variant_id": 604,
+      "n_steps": 288,
+      "aborted": false,
+      "final_err_mm": 15.166304677274304,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1079,
+      "variant_id": 605,
+      "n_steps": 300,
+      "aborted": false,
+      "final_err_mm": 14.201531305671795,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1079,
+      "variant_id": 606,
+      "n_steps": 298,
+      "aborted": false,
+      "final_err_mm": 10.434537410963948,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1087,
+      "variant_id": 607,
+      "n_steps": 304,
+      "aborted": false,
+      "final_err_mm": 51.06913559363772,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1087,
+      "variant_id": 608,
+      "n_steps": 302,
+      "aborted": false,
+      "final_err_mm": 54.16147523099762,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1087,
+      "variant_id": 609,
+      "n_steps": 299,
+      "aborted": false,
+      "final_err_mm": 42.986804762218675,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1095,
+      "variant_id": 610,
+      "n_steps": 284,
+      "aborted": false,
+      "final_err_mm": 16.102687899572206,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1095,
+      "variant_id": 611,
+      "n_steps": 282,
+      "aborted": false,
+      "final_err_mm": 10.0192047536522,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1095,
+      "variant_id": 612,
+      "n_steps": 282,
+      "aborted": false,
+      "final_err_mm": 17.066903614297445,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1103,
+      "variant_id": 613,
+      "n_steps": 276,
+      "aborted": false,
+      "final_err_mm": 10.743204213686964,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1103,
+      "variant_id": 614,
+      "n_steps": 284,
+      "aborted": false,
+      "final_err_mm": 13.65527273292602,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1103,
+      "variant_id": 615,
+      "n_steps": 288,
+      "aborted": false,
+      "final_err_mm": 6.6832650718258,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1111,
+      "variant_id": 616,
+      "n_steps": 289,
+      "aborted": false,
+      "final_err_mm": 7.6792176506763745,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1111,
+      "variant_id": 617,
+      "n_steps": 284,
+      "aborted": false,
+      "final_err_mm": 9.992087753881764,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1111,
+      "variant_id": 618,
+      "n_steps": 285,
+      "aborted": false,
+      "final_err_mm": 13.762827215273049,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1119,
+      "variant_id": 619,
+      "n_steps": 290,
+      "aborted": false,
+      "final_err_mm": 9.355703261274941,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1119,
+      "variant_id": 620,
+      "n_steps": 281,
+      "aborted": false,
+      "final_err_mm": 12.392011840804344,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1119,
+      "variant_id": 621,
+      "n_steps": 291,
+      "aborted": false,
+      "final_err_mm": 12.19768072724454,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1127,
+      "variant_id": 622,
+      "n_steps": 281,
+      "aborted": false,
+      "final_err_mm": 13.071970308023333,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1127,
+      "variant_id": 623,
+      "n_steps": 278,
+      "aborted": false,
+      "final_err_mm": 9.801323293575823,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1127,
+      "variant_id": 624,
+      "n_steps": 277,
+      "aborted": false,
+      "final_err_mm": 10.214446968252389,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1135,
+      "variant_id": 625,
+      "n_steps": 279,
+      "aborted": false,
+      "final_err_mm": 19.28009940140435,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1135,
+      "variant_id": 626,
+      "n_steps": 289,
+      "aborted": false,
+      "final_err_mm": 14.511921219189436,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1135,
+      "variant_id": 627,
+      "n_steps": 289,
+      "aborted": false,
+      "final_err_mm": 11.563455960431618,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1143,
+      "variant_id": 628,
+      "n_steps": 313,
+      "aborted": false,
+      "final_err_mm": 171.85219749884095,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1143,
+      "variant_id": 629,
+      "n_steps": 303,
+      "aborted": false,
+      "final_err_mm": 181.50457635974453,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1143,
+      "variant_id": 630,
+      "n_steps": 336,
+      "aborted": false,
+      "final_err_mm": 175.55585783145395,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1151,
+      "variant_id": 631,
+      "n_steps": 284,
+      "aborted": false,
+      "final_err_mm": 40.56093660069846,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1151,
+      "variant_id": 632,
+      "n_steps": 293,
+      "aborted": false,
+      "final_err_mm": 31.359943129987556,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1151,
+      "variant_id": 633,
+      "n_steps": 297,
+      "aborted": false,
+      "final_err_mm": 31.33965546600941,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1159,
+      "variant_id": 634,
+      "n_steps": 291,
+      "aborted": false,
+      "final_err_mm": 10.135534514798838,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1159,
+      "variant_id": 635,
+      "n_steps": 298,
+      "aborted": false,
+      "final_err_mm": 7.396746803288255,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1159,
+      "variant_id": 636,
+      "n_steps": 287,
+      "aborted": false,
+      "final_err_mm": 15.24135902991824,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1167,
+      "variant_id": 637,
+      "n_steps": 291,
+      "aborted": false,
+      "final_err_mm": 4.238366713291982,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1167,
+      "variant_id": 638,
+      "n_steps": 274,
+      "aborted": false,
+      "final_err_mm": 11.18054176765783,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1167,
+      "variant_id": 639,
+      "n_steps": 274,
+      "aborted": false,
+      "final_err_mm": 11.63189338775628,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1175,
+      "variant_id": 640,
+      "n_steps": 279,
+      "aborted": false,
+      "final_err_mm": 16.367151784169625,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1175,
+      "variant_id": 641,
+      "n_steps": 291,
+      "aborted": false,
+      "final_err_mm": 15.180301193062833,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1175,
+      "variant_id": 642,
+      "n_steps": 280,
+      "aborted": false,
+      "final_err_mm": 12.827200079264962,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1183,
+      "variant_id": 643,
+      "n_steps": 287,
+      "aborted": false,
+      "final_err_mm": 13.157860515892326,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1183,
+      "variant_id": 644,
+      "n_steps": 276,
+      "aborted": false,
+      "final_err_mm": 17.16290092545496,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1183,
+      "variant_id": 645,
+      "n_steps": 276,
+      "aborted": false,
+      "final_err_mm": 13.69922564906526,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1191,
+      "variant_id": 646,
+      "n_steps": 278,
+      "aborted": false,
+      "final_err_mm": 12.49903720585995,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1191,
+      "variant_id": 647,
+      "n_steps": 274,
+      "aborted": false,
+      "final_err_mm": 14.818230767357505,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1191,
+      "variant_id": 648,
+      "n_steps": 276,
+      "aborted": false,
+      "final_err_mm": 11.321791446767538,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1199,
+      "variant_id": 649,
+      "n_steps": 274,
+      "aborted": false,
+      "final_err_mm": 12.253273712300494,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1199,
+      "variant_id": 650,
+      "n_steps": 292,
+      "aborted": false,
+      "final_err_mm": 9.411986228075175,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1199,
+      "variant_id": 651,
+      "n_steps": 289,
+      "aborted": false,
+      "final_err_mm": 14.684025916904773,
+      "is_decision_pt": false
+    },
+    {
+      "seed": 1000007,
+      "variant_id": 652,
+      "n_steps": 311,
+      "aborted": false,
+      "final_err_mm": 11.501439192998461,
+      "is_decision_pt": true
+    },
+    {
+      "seed": 1000007,
+      "variant_id": 653,
+      "n_steps": 318,
+      "aborted": false,
+      "final_err_mm": 12.655115083809443,
+      "is_decision_pt": true
+    },
+    {
+      "seed": 1000015,
+      "variant_id": 654,
+      "n_steps": 309,
+      "aborted": false,
+      "final_err_mm": 12.098931708162349,
+      "is_decision_pt": true
+    },
+    {
+      "seed": 1000015,
+      "variant_id": 655,
+      "n_steps": 311,
+      "aborted": false,
+      "final_err_mm": 10.594735951583711,
+      "is_decision_pt": true
+    },
+    {
+      "seed": 1000023,
+      "variant_id": 656,
+      "n_steps": 324,
+      "aborted": false,
+      "final_err_mm": 15.82111386157251,
+      "is_decision_pt": true
+    },
+    {
+      "seed": 1000023,
+      "variant_id": 657,
+      "n_steps": 320,
+      "aborted": false,
+      "final_err_mm": 12.803698802964025,
+      "is_decision_pt": true
+    }
+  ]
+}

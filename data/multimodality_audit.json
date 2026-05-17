@@ -1,0 +1,58 @@
+{
+  "data_path": "/home/alfajer/quad_obstacle_planning/data/planner_dataset_v1.npz",
+  "n_samples": 192853,
+  "n_query": 8000,
+  "k": 5,
+  "radius_diagnostic": 0.5289249066853455,
+  "action_span_thresh": 0.1,
+  "n_multimodal_clusters": 3596,
+  "n_unimodal_clusters": 4404,
+  "n_singleton_clusters": 0,
+  "frac_multimodal": 0.4495,
+  "frac_multimodal_decision_pt": 0.39475,
+  "frac_multimodal_random": 0.50425,
+  "frac_within_radius": 0.0295,
+  "frac_singleton": 0.0,
+  "action_span_stats": {
+    "mean": 0.1006611181749031,
+    "median": 0.09660499542951584,
+    "p95": 0.15337553024291992,
+    "max": 0.9619214534759521
+  },
+  "cluster_radius_stats": {
+    "mean": 0.94176072417663,
+    "median": 0.8713710620355357
+  },
+  "cross_variant": {
+    "n_classified": 8000,
+    "n_classified_dp": 4000,
+    "span_stats": {
+      "median": 0.10210736095905304,
+      "p75": 0.12537145987153053,
+      "p95": 0.1829374529421328,
+      "max": 0.9619214534759521
+    },
+    "span_stats_dp": {
+      "median": 0.0946444720029831,
+      "p75": 0.11235197260975838,
+      "p95": 0.14723764881491655,
+      "max": 0.44145143032073975
+    },
+    "distance_stats": {
+      "median": 1.2631165910464235,
+      "p75": 1.6042349227236397
+    },
+    "sweep": {
+      "frac_mm@0.05": 0.98975,
+      "frac_mm_dp@0.05": 0.984,
+      "frac_mm@0.08": 0.799125,
+      "frac_mm_dp@0.08": 0.72425,
+      "frac_mm@0.10": 0.531625,
+      "frac_mm_dp@0.10": 0.4215,
+      "frac_mm@0.15": 0.116375,
+      "frac_mm_dp@0.15": 0.0445,
+      "frac_mm@0.20": 0.034,
+      "frac_mm_dp@0.20": 0.00575
+    }
+  }
+}
