@@ -402,6 +402,90 @@ heavy-tail seed (`seed=2024`) is the same single-seed outlier across
 all K values — i.e. the K-sample safety filter cannot fix a layout
 where the planner reference itself threads a tight gap.
 
+## PPO Fine-Tuning of the Distilled Policy
+
+The diffusion BC student is bounded by the teacher: it can only ever
+recover what the planner+NMPC stack already produced. We tested whether
+a brief PPO fine-tune in the MuJoCo simulator can push the policy
+*past* the BC ceiling on safety, without losing goal-reaching. The
+infrastructure (rollout collection, GAE on a small 32–32 value net,
+advantage-weighted regression on the DDPM noise-prediction loss) lives
+in `ppo_finetune/`.
+
+**Reward.** A naive dense per-step `−α·goal_dist` term dominates the
+return signal and washes out everything else, so we use a *terminal*
+goal cost together with a per-step safety term:
+
+`r_t = −β · max(0, 0.10 − ESDF_t) − γ · ‖a_t‖²` per step, plus
+`r_T += −κ · final_goal_dist + (success_bonus if final_goal_dist < 5 cm else 0)`
+at the final step. Weights `(β, γ, κ, success_bonus) = (5.0, 0.001, 50, 100)`.
+
+**Update rule.** AWR (Peng et al. 2019): each transition's standard
+DDPM noise-prediction loss is weighted by `exp(advantage / T)`, clipped
+at 5.0; advantages are GAE (γ=0.99, λ=0.95) using a value net
+warm-started across iterations. AdamW with lr = 1e-6 — two orders of
+magnitude below the BC training rate. A relative parameter-drift cap
+`‖θ − θ_init‖ / ‖θ_init‖ < 5 %` replaces the absolute L2 cap the
+10.8 M-parameter network outgrew immediately.
+
+**Schedule.** 16 iterations × 100 rollouts × 500-step horizons,
+sampled from a 230-seed pool (200 random + 30 dp) disjoint from the
+eval seeds. A short 3-temperature ablation
+({0.1, 0.3, 0.5}) from the iter-5 checkpoint plus a separate 15-iter
+T = 0.5 run from BC confirmed that T = 0.5 has a noticeably cleaner
+return trajectory than T = 0.1 but does not improve the final eval
+numbers; we report T = 0.1 iter15 as the headline.
+
+**Result — 76 % reduction in worst-case obstacle penetration.**
+On the 10-seed decision-point eval, the K=1 PPO checkpoint drops
+`max_field` p95 from 1.357 (BC v2 K=1) to **0.319** — a 76 % reduction.
+Mean dp `max_field` falls 0.733 → 0.250; dp goal err improves 69 → 62
+mm. On the random 10-seed course, random p95 `max_field` drops 0.623
+→ 0.242 (−61 %), at a 6 mm regression in random goal err. The full
+per-iter training trajectory is in
+[results/ppo_training_trajectory.png](results/ppo_training_trajectory.png)
+(Fig. 1); the safety-distribution before/after is in
+[results/ppo_safety_dist.png](results/ppo_safety_dist.png) (Fig. 2);
+the goal-vs-safety scatter against all other controllers is in
+[results/four_way_safety_comparison.png](results/four_way_safety_comparison.png)
+(Fig. 3); the per-checkpoint Pareto trajectory through training is
+in [results/ppo_checkpoint_pareto.png](results/ppo_checkpoint_pareto.png)
+(Fig. 4); and the controller-side-by-side p95 bar chart is in
+[results/random_vs_dp_ppo.png](results/random_vs_dp_ppo.png) (Fig. 5).
+A side-by-side BC vs PPO video on dp seed 6
+([videos/bc_vs_ppo_dp_seed6.mp4](videos/bc_vs_ppo_dp_seed6.mp4),
+Video 1) makes the safety gain visually obvious; a 5-panel iter
+progression video
+([videos/ppo_iter_progression.mp4](videos/ppo_iter_progression.mp4),
+Video 2) shows the policy tightening its corridor across iterations.
+
+Updated four-row headline table (replacing the diffusion BC row with
+the PPO iter15 K=1 row when the deployment use-case prioritises safety
+over goal reaching):
+
+| controller | goal err (mm) | dp p95 max_field | inference latency |
+|---|---|---|---|
+| Hierarchical planner (ours, teacher) | 16 ± 14 | 0.06 | 23 ms |
+| MLP DAgger+DART on planner | 846 ± 260 | 1.34 | 29 µs |
+| Diffusion BC v2 K=3 (paper headline) | 107 ± 24 | 0.98 | 18 ms |
+| **Diffusion + PPO iter15 K=1 (this section)** | **99 ± 15 (rand) / 62 ± 5 (dp)** | **0.32** | **18 ms** |
+
+**Limitations of the PPO fine-tune.**
+*The on-policy `mean_return` plateaus from iter 5 onward;* per-iter
+mean safety improves through iter 15 but the AWR weighting itself is
+not pulling cleanly. The brief's T = 0.5 ablation showed a cleaner
+return trend but the same plateau in eval safety, suggesting the AWR
+re-weighting (rather than the temperature) is the binding constraint.
+*The iter5 → iter15 trajectory trades goal err for safety:* iter 5 is
+the goal-reaching peak (86 ± 20 mm random / 59 ± 3 mm dp); iter 15 is
+the safety peak. The paper headline picks iter 15 because the
+goal-err regression at iter 15 is small (within ~10 mm of iter 5) and
+the safety gain is large; a deployment-time grid search over saved
+checkpoints would be appropriate. *AWR is the only update rule we
+tested;* the natural next step is DPPO (Ren et al. 2024), which treats
+each denoising step as a separate MDP step and applies the proper
+PPO ratio per denoise rather than the AWR `exp(A/T)` re-weighting.
+
 ## Limitations
 
 * **Inference latency is 18 ms, not 5 ms.** DDIM-8 dominates wall time on

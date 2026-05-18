@@ -53,7 +53,7 @@ from ppo_finetune.awr_update import awr_step, _param_l2, param_drift_relative
 from ppo_finetune.reward import compute_episode_undiscounted_return
 
 
-CHECKPOINT_EVERY = 5     # save every 5 iters: iter5, 10, 15, ...
+CHECKPOINT_EVERY = 5     # default: save every 5 iters: iter5, 10, 15, ...
 
 
 def load_diffusion_policy(checkpoint_path: str, dataset_path: str,
@@ -127,6 +127,10 @@ def main():
     ap.add_argument('--max-field-limit', type=float, default=1.5,
                     help='abort if any random-seed max_field exceeds 1.5')
 
+    ap.add_argument('--save-iters', type=int, nargs='+', default=None,
+                    help='explicit list of iterations to checkpoint. If '
+                         'omitted, defaults to every CHECKPOINT_EVERY=5 '
+                         'iters as in phase 2.')
     ap.add_argument('--checkpoint-dir', type=str, default='data')
     ap.add_argument('--checkpoint-prefix', type=str, default='diffusion_v2_ppo_phase2')
     ap.add_argument('--rollouts-dir', type=str, default='data/ppo_rollouts')
@@ -252,7 +256,9 @@ def main():
               f"drift_abs={iter_log['param_drift_l2']:.4f}")
 
         # 5. Periodic checkpoint
-        if it % CHECKPOINT_EVERY == 0:
+        should_save = ((args.save_iters is None and it % CHECKPOINT_EVERY == 0)
+                       or (args.save_iters is not None and it in args.save_iters))
+        if should_save:
             ckpt_path = Path(_ROOT / args.checkpoint_dir
                              / f'{args.checkpoint_prefix}_iter{it}.pt')
             ckpt_path.parent.mkdir(parents=True, exist_ok=True)
