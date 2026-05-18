@@ -41,6 +41,7 @@ dagger.py                    DAgger+DART distillation pipeline
 policy_inference.{c,h}       distilled-policy C inference
 mujoco_menagerie/          Bitcraze Crazyflie 2 model (with actuator
 corrections; see Known Issues)
+ppo_finetune/              Phase-1 AWR fine-tuning of the v2 diffusion student (3-iter scaffolding; phase 2 scales up).
 results/                   10-seed JSONs + verification plots
 videos/                    Demo videos
 scripts/                   Numerical verification scripts
