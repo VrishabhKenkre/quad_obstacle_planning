@@ -1,0 +1,124 @@
+{
+  "temperatures": [
+    0.1,
+    0.3,
+    0.5
+  ],
+  "recommended_T": 0.5,
+  "recommended_reason": "T=0.5 has the highest mean_return slope across 3 iters (slope=6.41/iter)",
+  "branches": [
+    {
+      "T": 0.1,
+      "iters": [
+        {
+          "iteration": 1,
+          "T": 0.1,
+          "mean_return": -16.6543636603959,
+          "mean_goal_err_mm": 80.52392019274232,
+          "mean_max_field": 0.15126113454169277,
+          "p95_max_field": 0.620669305013295,
+          "param_drift_relative": 0.00040614161990924893,
+          "param_drift_l2": 0.057126022291003484
+        },
+        {
+          "iteration": 2,
+          "T": 0.1,
+          "mean_return": -37.55343418236723,
+          "mean_goal_err_mm": 82.3836649929056,
+          "mean_max_field": 0.23400301019560732,
+          "p95_max_field": 1.0192556467007814,
+          "param_drift_relative": 0.0007380545856811059,
+          "param_drift_l2": 0.10381138166292139
+        },
+        {
+          "iteration": 3,
+          "T": 0.1,
+          "mean_return": -31.724263077987086,
+          "mean_goal_err_mm": 86.74823598811912,
+          "mean_max_field": 0.18334596002084733,
+          "p95_max_field": 0.5026454325830899,
+          "param_drift_relative": 0.0010895147425079136,
+          "param_drift_l2": 0.15324615950660572
+        }
+      ],
+      "wallclock_seconds": 1367.6686310768127
+    },
+    {
+      "T": 0.3,
+      "iters": [
+        {
+          "iteration": 1,
+          "T": 0.3,
+          "mean_return": -23.289761524997544,
+          "mean_goal_err_mm": 83.05347563322262,
+          "mean_max_field": 0.23552784494738138,
+          "p95_max_field": 0.872050102355322,
+          "param_drift_relative": 0.0004057851667774639,
+          "param_drift_l2": 0.057075885224143405
+        },
+        {
+          "iteration": 2,
+          "T": 0.3,
+          "mean_return": -28.118665030630872,
+          "mean_goal_err_mm": 81.18558422985616,
+          "mean_max_field": 0.22382716483996906,
+          "p95_max_field": 0.7033373056148347,
+          "param_drift_relative": 0.0007531135265817703,
+          "param_drift_l2": 0.10592950340026631
+        },
+        {
+          "iteration": 3,
+          "T": 0.3,
+          "mean_return": -26.96781561279927,
+          "mean_goal_err_mm": 81.24817034098132,
+          "mean_max_field": 0.21022578945352138,
+          "p95_max_field": 0.6860352932045369,
+          "param_drift_relative": 0.0010702041765703887,
+          "param_drift_l2": 0.1505300236413737
+        }
+      ],
+      "wallclock_seconds": 1377.397751569748
+    },
+    {
+      "T": 0.5,
+      "iters": [
+        {
+          "iteration": 1,
+          "T": 0.5,
+          "mean_return": -25.18753720697496,
+          "mean_goal_err_mm": 83.479199418106,
+          "mean_max_field": 0.21722702224071636,
+          "p95_max_field": 0.8224557463873671,
+          "param_drift_relative": 0.0004556019712100527,
+          "param_drift_l2": 0.06408288904000084
+        },
+        {
+          "iteration": 2,
+          "T": 0.5,
+          "mean_return": -19.81371147591234,
+          "mean_goal_err_mm": 84.11526968651182,
+          "mean_max_field": 0.18573237957134126,
+          "p95_max_field": 0.5630886022927236,
+          "param_drift_relative": 0.0008386359005560974,
+          "param_drift_l2": 0.11795868928653083
+        },
+        {
+          "iteration": 3,
+          "T": 0.5,
+          "mean_return": -12.361863481453925,
+          "mean_goal_err_mm": 89.2176854469001,
+          "mean_max_field": 0.14579131568630088,
+          "p95_max_field": 0.5261710506011552,
+          "param_drift_relative": 0.00118400647409977,
+          "param_drift_l2": 0.1665369342034665
+        }
+      ],
+      "wallclock_seconds": 1368.9402849674225
+    }
+  ],
+  "trend_scores": {
+    "0.5": 6.412836862760518,
+    "0.3": -1.8390270439008665,
+    "0.1": -7.534949708795598
+  }
+}
