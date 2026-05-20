@@ -1,0 +1,22 @@
+{
+  "source_dataset": "/home/alfajer/quad_obstacle_planning/data/planner_dataset_v2.npz",
+  "n_rollouts_source": 658,
+  "n_rollouts_surviving": 501,
+  "n_samples_source": 193366,
+  "n_samples_surviving": 146504,
+  "criteria_used": {
+    "final_goal_err_mm_max": 30.0,
+    "max_field_max": 0.1,
+    "terminal_speed_max": 0.5,
+    "efficiency_min": 0.65,
+    "overshoot_max": 0.1
+  },
+  "relaxations_applied": [],
+  "per_criterion_pass_rate_under_final_criteria": {
+    "final_goal_err_lt_30": 0.7993920972644377,
+    "max_field_lt": 0.9620060790273556,
+    "terminal_speed_lt": 1.0,
+    "efficiency_gt": 1.0,
+    "overshoot_lt": 0.958966565349544
+  }
+}
