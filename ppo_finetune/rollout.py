@@ -50,7 +50,9 @@ from obstacle_course import make_obstacles, obstacle_field_value
 from collect_planner_data import make_observation, OBS_DIM, ACT_DIM, START, GOAL
 from randomize_astar import decision_point_layout
 
-from ppo_finetune.reward import compute_step_reward, compute_episode_undiscounted_return
+from ppo_finetune.reward import (compute_step_reward,
+                                  compute_episode_undiscounted_return,
+                                  aggregate_components)
 
 
 # Held-out from the eval seeds: random eval uses {42, 7, 13, 99, 256, 128, 314,
@@ -75,6 +77,10 @@ class Episode:
     max_field: float
     goal_err_mm: float
     n_steps: int
+    # Phase-3 additions:
+    prev_states: np.ndarray = None     # (T, 12) state BEFORE each step
+    reward_components: dict = None     # episode-summed component dict
+    path_length_m: float = 0.0         # sum of ||p_t - p_{t-1}|| over all t
 
 
 def _build_obstacles(seed: int, layout: str):
@@ -110,13 +116,17 @@ def rollout_one_episode(policy, seed: int, layout: str, device,
     goal = np.asarray(GOAL, dtype=np.float64)
 
     obs_list, act_list, rew_list = [], [], []
-    state_list, esdf_list = [], []
+    state_list, prev_state_list, esdf_list = [], [], []
+    components_list = []
     max_field = 0.0
+    path_length_m = 0.0
     policy.eval()
     for t in range(horizon):
         obs = make_observation(state_mj, GOAL, vm)
         obs_list.append(obs.astype(np.float32).copy())
         state_list.append(state_mj.astype(np.float32).copy())
+        prev_state_for_reward = state_mj.copy()
+        prev_state_list.append(prev_state_for_reward.astype(np.float32).copy())
 
         with torch.no_grad():
             obs_t = torch.from_numpy(obs).to(device).reshape(1, 1, OBS_DIM)
@@ -134,10 +144,15 @@ def rollout_one_episode(policy, seed: int, layout: str, device,
         max_field = max(max_field, float(field_after))
         esdf_list.append(esdf_after)
         is_terminal = (t == horizon - 1)
-        r = compute_step_reward(state_mj, a, goal, esdf_after,
-                                is_terminal=is_terminal,
-                                **reward_kwargs)
+        path_length_m += float(np.linalg.norm(
+            state_mj[0:3] - prev_state_for_reward[0:3]))
+        r, comp = compute_step_reward(
+            state_mj, a, goal, esdf_after,
+            prev_state=prev_state_for_reward,
+            is_terminal=is_terminal,
+            **reward_kwargs)
         rew_list.append(float(r))
+        components_list.append(comp)
 
     dones = np.zeros(len(rew_list), dtype=bool)
     if dones.size > 0:
@@ -151,9 +166,12 @@ def rollout_one_episode(policy, seed: int, layout: str, device,
         rewards=np.asarray(rew_list, dtype=np.float32),
         dones=dones,
         states=np.asarray(state_list, dtype=np.float32),
+        prev_states=np.asarray(prev_state_list, dtype=np.float32),
         esdf_vals=np.asarray(esdf_list, dtype=np.float32),
         max_field=max_field, goal_err_mm=goal_err_mm,
         n_steps=len(rew_list),
+        reward_components=aggregate_components(components_list),
+        path_length_m=float(path_length_m),
     )
 
 

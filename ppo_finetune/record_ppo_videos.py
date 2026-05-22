@@ -54,9 +54,12 @@ def verify_frame(video, t=5.0):
     print(f"  verify -> {frame}")
 
 
-def make_video1(seed: int = 6, duration: float = 12.0, fps: int = 30):
-    """BC vs PPO iter15 on dp seed 6."""
-    out = _ROOT / 'videos' / 'bc_vs_ppo_dp_seed6.mp4'
+def make_video1(seed: int = 6, duration: float = 12.0, fps: int = 30,
+                out_name: str | None = None):
+    """BC vs PPO iter15 on a chosen dp seed."""
+    if out_name is None:
+        out_name = f'bc_vs_ppo_dp_seed{seed}.mp4'
+    out = _ROOT / 'videos' / out_name
     tmp = _ROOT / 'videos' / '_v1_tmp'
     tmp.mkdir(parents=True, exist_ok=True)
     bc_panel = tmp / 'bc.mp4'
@@ -90,9 +93,12 @@ def make_video1(seed: int = 6, duration: float = 12.0, fps: int = 30):
 
 
 def make_video2(seed: int = 6, duration: float = 12.0, fps: int = 30,
-                include_t05: bool = True):
+                include_t05: bool = True,
+                out_name: str | None = None):
     """5-panel iter progression. Falls back to 4 panels if T=0.5 isn't ready."""
-    out = _ROOT / 'videos' / 'ppo_iter_progression.mp4'
+    if out_name is None:
+        out_name = 'ppo_iter_progression.mp4'
+    out = _ROOT / 'videos' / out_name
     tmp = _ROOT / 'videos' / '_v2_tmp'
     tmp.mkdir(parents=True, exist_ok=True)
     panels = [
@@ -137,13 +143,19 @@ def main():
     ap.add_argument('--fps', type=int, default=30)
     ap.add_argument('--skip-v1', action='store_true')
     ap.add_argument('--skip-v2', action='store_true')
+    ap.add_argument('--v1-out', type=str, default=None,
+                    help='override Video 1 output filename')
+    ap.add_argument('--v2-out', type=str, default=None,
+                    help='override Video 2 output filename')
     args = ap.parse_args()
     if not args.skip_v1:
         print("\n[ppo-videos] === Video 1: BC vs PPO ===")
-        make_video1(seed=args.seed, duration=args.duration, fps=args.fps)
+        make_video1(seed=args.seed, duration=args.duration, fps=args.fps,
+                    out_name=args.v1_out)
     if not args.skip_v2:
         print("\n[ppo-videos] === Video 2: iter progression ===")
-        make_video2(seed=args.seed, duration=args.duration, fps=args.fps)
+        make_video2(seed=args.seed, duration=args.duration, fps=args.fps,
+                    out_name=args.v2_out)
 
 
 if __name__ == '__main__':

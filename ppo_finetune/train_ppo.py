@@ -104,11 +104,32 @@ def main():
     ap.add_argument('--awr-batch', type=int, default=64)
     ap.add_argument('--awr-temperature', type=float, default=0.1)
     ap.add_argument('--awr-weight-clip', type=float, default=5.0)
+    ap.add_argument('--reward-version', type=str, default='phase3',
+                    choices=['phase2', 'phase3'],
+                    help='which reward shaping to use during rollouts. '
+                         'phase2 = terminal goal cost (legacy). '
+                         'phase3 = per-step progress + path penalty + '
+                         'safety + small control (default).')
+    # Phase-3 reward weight overrides (None = use reward.py defaults).
+    ap.add_argument('--reward-lambda', type=float, default=None)
+    ap.add_argument('--reward-eta', type=float, default=None)
+    ap.add_argument('--reward-beta', type=float, default=None)
+    ap.add_argument('--reward-safe-margin', type=float, default=None)
+    ap.add_argument('--reward-kappa', type=float, default=None)
     ap.add_argument('--gae-gamma', type=float, default=0.99)
     ap.add_argument('--gae-lambda', type=float, default=0.95)
     ap.add_argument('--value-epochs', type=int, default=10,
                     help='per-iter value refit epochs; warmstarted, so '
                          'fewer epochs per iter than phase 1.')
+
+    # Phase-3 abort: stalled-policy guard (no movement + bad goal)
+    ap.add_argument('--stall-step-length-cm', type=float, default=1.0,
+                    help='if mean per-step path length < this AND '
+                         'random goal err > stall_goal_limit by iter '
+                         'stall_after_iter, abort (the policy isn''t '
+                         'moving but isn''t converging either).')
+    ap.add_argument('--stall-goal-limit-mm', type=float, default=120.0)
+    ap.add_argument('--stall-after-iter', type=int, default=5)
 
     # Phase-2 abort thresholds (relative drift + behavioural regression)
     ap.add_argument('--drift-rel-iter-limit', type=float, default=0.02,
@@ -177,11 +198,21 @@ def main():
         print(f"[ppo2-train] iter {it}: collecting {args.n_rollouts} rollouts "
               f"(horizon={args.horizon})")
         t0 = time.time()
+        reward_kwargs = dict(version=args.reward_version)
+        for k, v in (('lam', args.reward_lambda),
+                     ('eta', args.reward_eta),
+                     ('beta', args.reward_beta),
+                     ('safe_margin', args.reward_safe_margin),
+                     ('kappa', args.reward_kappa)):
+            if v is not None:
+                reward_kwargs[k] = float(v)
         episodes = collect_rollouts(
             policy, n_episodes=args.n_rollouts, horizon=args.horizon,
-            device=device, rng_seed=it)
+            device=device, rng_seed=it,
+            reward_kwargs=reward_kwargs)
         t_rollouts = time.time() - t0
-        rollouts_npz = Path(_ROOT / args.rollouts_dir / f'phase2_round_{it}.npz')
+        rollouts_npz = Path(_ROOT / args.rollouts_dir
+                            / f'{args.reward_version}_round_{it}.npz')
         save_rollouts_npz(episodes, rollouts_npz)
 
         # 2. Estimate advantages (value net warmstarted)
@@ -218,6 +249,20 @@ def main():
         ep_max_field_random = [e.max_field for e in episodes
                                 if e.layout == 'random']
         peak_return = max(peak_return, float(np.mean(ep_returns)))
+
+        # Per-iter reward-component means and path-length stats
+        comp_keys = ('r_progress', 'r_safety', 'r_path',
+                     'r_control', 'r_terminal')
+        component_means = {}
+        for k in comp_keys:
+            vals = [(e.reward_components or {}).get(k, 0.0)
+                    for e in episodes]
+            component_means[k] = float(np.mean(vals)) if vals else 0.0
+        path_lengths_m = [float(getattr(e, 'path_length_m', 0.0))
+                          for e in episodes]
+        mean_step_length_cm = (100.0 * float(np.mean(path_lengths_m))
+                               / max(float(np.mean(
+                                   [e.n_steps for e in episodes])), 1.0))
         iter_log = dict(
             iteration=int(it),
             wallclock_seconds=float(time.time() - t_iter),
@@ -244,6 +289,11 @@ def main():
             adv_mean_raw=float(adv['adv_mean']),
             adv_std_raw=float(adv['adv_std']),
             peak_return_so_far=float(peak_return),
+            # Phase-3 additions
+            reward_version=args.reward_version,
+            reward_components=component_means,
+            mean_path_length_m=float(np.mean(path_lengths_m)),
+            mean_step_length_cm=float(mean_step_length_cm),
         )
         log['iterations'].append(iter_log)
         log['peak_return'] = float(peak_return)
@@ -253,7 +303,13 @@ def main():
               f"max_field mean/p95={iter_log['mean_max_field']:.3f}/"
               f"{iter_log['p95_max_field']:.3f}  "
               f"drift_rel={iter_log['param_drift_relative']:.4f}  "
-              f"drift_abs={iter_log['param_drift_l2']:.4f}")
+              f"step={iter_log['mean_step_length_cm']:.2f}cm")
+        cm = iter_log['reward_components']
+        print(f"           [reward] r_progress={cm['r_progress']:.2f}  "
+              f"r_safety={cm['r_safety']:.2f}  "
+              f"r_path={cm['r_path']:.2f}  "
+              f"r_control={cm['r_control']:.4f}  "
+              f"r_terminal={cm['r_terminal']:.2f}")
 
         # 5. Periodic checkpoint
         should_save = ((args.save_iters is None and it % CHECKPOINT_EVERY == 0)
@@ -304,6 +360,15 @@ def main():
             abort_reason = (
                 f"random-seed max_field {iter_log['max_field_max_random']:.3f}"
                 f" exceeded the {args.max_field_limit:.2f} safety cliff")
+        elif (it >= args.stall_after_iter
+              and iter_log['mean_step_length_cm'] < args.stall_step_length_cm
+              and iter_log['mean_goal_err_mm_random'] > args.stall_goal_limit_mm):
+            abort_reason = (
+                f"policy stalled by iter {it}: mean step length "
+                f"{iter_log['mean_step_length_cm']:.2f} cm < "
+                f"{args.stall_step_length_cm:.2f} cm AND random goal err "
+                f"{iter_log['mean_goal_err_mm_random']:.0f} mm > "
+                f"{args.stall_goal_limit_mm:.0f} mm")
 
         if abort_reason is not None:
             log['aborted'] = True
