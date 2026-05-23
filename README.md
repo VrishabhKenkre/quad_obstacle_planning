@@ -23,28 +23,25 @@ homotopy class and routes around it (peak field 0.03).
 
 ## Demos
 
-GitHub does not autoplay `.mp4` in a README, so the videos below are linked;
-the key comparison is also inlined as a GIF.
-
 **Planner (teacher) — reference behavior.** The full hierarchical planner
-navigating cleanly, 16 mm goal error. [▶ planner_demo.mp4](media/planner_demo.mp4)
+navigating cleanly, 16 mm goal error.
+
+![Planner demo](media/planner_demo.gif)
 
 **MLP vs Diffusion — the multi-modality failure and fix.** Side-by-side: the
 MLP drives into the obstacle, diffusion goes around.
 
 ![MLP vs Diffusion](media/mlp_vs_diffusion.gif)
 
-[▶ mlp_vs_diffusion_multimodal.mp4](media/mlp_vs_diffusion_multimodal.mp4)
-
 **Diffusion — clean decision-point navigation.** Diffusion v2 (K=3) weaving
 around the central obstacle, peak field 0.03.
 
-![Diffusion clean decision-point navigation](media/diffusion_clean_dp_frame.png)
-
-[▶ diffusion_clean_dp.mp4](media/diffusion_clean_dp.mp4)
+![Diffusion clean decision-point navigation](media/diffusion_clean_dp.gif)
 
 **MLP behavior cloning — unsafe baseline.** The deterministic MLP plowing
-through obstacles, peak field 1.7. [▶ mlp_bc_unsafe.mp4](media/mlp_bc_unsafe.mp4)
+through obstacles, peak field 1.7.
+
+![MLP behavior cloning unsafe baseline](media/mlp_bc_unsafe.gif)
 
 ---
 
